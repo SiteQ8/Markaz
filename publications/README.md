@@ -8,6 +8,7 @@ Research notes from the centre. Each note is numbered, dated and self contained.
 | --- | --- | --- |
 | [0001](0001-licence-files-never-read/) | Licence Files That Are Never Read | 2026-09-04 |
 | [0002](0002-validated-regulatory-crosswalk/) | A Validated Method for Proposing Regulatory Crosswalks | 2026-09-04 |
+| [0003](0003-arabic-security-lexicon/) | Deriving Arabic Security Vocabulary From a Regulator's Own Parallel Text | 2026-09-04 |
 
 ## Format
 

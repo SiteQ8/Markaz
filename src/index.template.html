@@ -217,7 +217,8 @@ html[dir="rtl"] .checks li{line-height:1.78;font-size:14px}
          border:1px solid #5c4415;color:var(--amber);font-size:12.5px}
 
 /* Datasets */
-.dsets{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+.dsets{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}
+@media(max-width:1020px){.dsets{grid-template-columns:repeat(2,1fr)}}
 .dset{background:linear-gradient(168deg,var(--panel2),var(--panel));border:1px solid var(--rule);
       border-radius:12px;padding:16px 17px;box-shadow:var(--lift);display:flex;flex-direction:column}
 .dset b{font-family:var(--mono);font-size:26px;color:var(--go);font-weight:660;letter-spacing:-0.035em}
@@ -377,6 +378,10 @@ const SETS=[
   en:"CBK resilience framework",ar:"إطار المرونة لبنك الكويت المركزي",
   enD:"Version 1.0 flattened to one row per control across three baselines. Two of the 876 official controls are unaccounted for, and that gap is recorded.",
   arD:"الإصدار الأول مسطحا بسجل لكل ضابط عبر ثلاثة خطوط أساس، وضابطان من أصل ٨٧٦ غير محسوبين وهذه الثغرة مسجلة."},
+ {id:"kw-lexicon",file:"terms",n:272,fmt:["JSON","CSV"],
+  en:"Bilingual lexicon",ar:"المعجم ثنائي اللغة",
+  enD:"44 term pairs attested by the regulator in its own control titles, and 228 derived by alignment over the parallel text. Derived entries recover at 0.808 against known answers, so roughly one in five is wrong.",
+  arD:"٤٤ زوجا مثبتا عن المنظِّم في عناوين ضوابطه نفسها، و٢٢٨ زوجا مشتقا بالمحاذاة على النص المتوازي، وتسترجع المداخل المشتقة عند ٠٫٨٠٨ أمام إجابات معلومة، فواحد من كل خمسة خطأ."},
  {id:"kw-crosswalk",file:"nbcc-corf",n:215,fmt:["JSON"],
   en:"Proposed crosswalk",ar:"الربط المقترح",
   enD:"Candidate pairs between the two regimes, every one of them unreviewed. Not a compliance mapping.",
@@ -388,6 +393,11 @@ const PUBS=[
   en:"Licence Files That Are Never Read",ar:"ملفات الرخص التي لا تُقرأ",
   enD:"A licence file can be present, readable to a person, and treated as absent by every automated consumer. Six causes across 109 repositories, 21 of which carried an unreadable licence.",
   arD:"قد يكون ملف الرخصة حاضرا يقرؤه الإنسان وتعامله كل أداة آلية وكأنه غائب، وقد وثقت ستة أسباب عبر ١٠٩ مستودعات حمل ٢١ منها رخصة غير مقروءة."},
+ {no:"0003",dir:"0003-arabic-security-lexicon",date:"2026-09-04",
+  en:"Deriving Arabic Security Vocabulary From a Regulator's Own Parallel Text",
+  ar:"اشتقاق المصطلح الأمني العربي من نص متوازٍ صاغه المنظِّم",
+  enD:"There is no authoritative Arabic security vocabulary. 44 pairs attested by a regulator and 228 derived by alignment, kept strictly apart, with the residual errors shown to be boundary errors rather than random ones.",
+  arD:"لا يوجد معجم أمني عربي معتمد، وقد نُشر ٤٤ زوجا مثبتا عن منظِّم و٢٢٨ زوجا مشتقا بالمحاذاة مع فصل صارم بينهما، وتبين أن الأخطاء المتبقية أخطاء حدود لا أخطاء عشوائية."},
  {no:"0002",dir:"0002-validated-regulatory-crosswalk",date:"2026-09-04",
   en:"A Validated Method for Proposing Regulatory Crosswalks",ar:"منهج مُتحقَّق منه لاقتراح الربط بين الأطر التنظيمية",
   enD:"Validating a similarity metric against mappings a person already made, then applying it across two Kuwaiti regimes. Only 8 of 215 candidates reach strong confidence, and one of those is wrong.",
@@ -397,7 +407,7 @@ const PUBS=[
 const T={
  en:{nm:"Markaz",tg:"Kuwait Cybersecurity Research Centre",btn:"العربية",
   lede:"Kuwait's cybersecurity instruments exist as gazette documents and as logic buried inside applications. Markaz publishes them as data you can query, cite and check, and states plainly how far each result can be trusted.",
-  figs:[["44","controls in the baseline"],["329","atomic checks"],["1,133","published records"],["2","research notes"]],
+  figs:[["44","controls in the baseline"],["329","atomic checks"],["1,405","published records"],["3","research notes"]],
   hEx:"The national baseline",aEx:"download",
   sEx:"Every control of NCSC Decision No. 2 of 2026, grouped by function. Select a control to read the requirement as the Annex prints it, the checks derived from it, and where it maps in three international frameworks.",
   hXw:"Crosswalk to the CBK framework",aXw:"read the method",
@@ -419,7 +429,8 @@ const T={
   f1:"Open data and open method. Rebuilt from source, not maintained by hand.",
   f2:"Charter",f3:"github.com/SiteQ8",nolic:"unlicensed",open:"open",records:"records searchable",
   cmd:"Search every control, check and candidate pair",
-  gCtl:"National baseline",gCorf:"CBK framework",gXw:"Crosswalk candidates",gPrj:"Projects",
+  gCtl:"National baseline",gCorf:"CBK framework",gXw:"Crosswalk candidates",
+  gLex:"Lexicon",gPrj:"Projects",lexA:"attested",lexD:"derived",
   loading:"Loading the larger corpora, results will widen shortly.",
   noHit:"Nothing found.",
   cf:{strong:"strong",moderate:"moderate",weak:"weak"},
@@ -431,7 +442,7 @@ const T={
   sRev:"The bottleneck is human judgement. Name yourself, work through a confidence band, and export the decisions as a file to submit. A confirmation without a named reviewer is worth no more than the machine proposal it replaced."},
  ar:{nm:"مركز",tg:"مركز الكويت لأبحاث الأمن السيبراني",btn:"English",
   lede:"توجد الأدوات التشريعية الكويتية في وثائق الجريدة الرسمية أو محبوسة داخل منطق التطبيقات، وينشرها مركز بيانات يمكن الاستعلام عنها واقتباسها والتحقق منها، ثم يصرّح بحدود الثقة في كل نتيجة.",
-  figs:[["٤٤","ضابطا في الأساس"],["٣٢٩","فحصا ذريا"],["١١٣٣","سجلا منشورا"],["٢","ورقتان بحثيتان"]],
+  figs:[["٤٤","ضابطا في الأساس"],["٣٢٩","فحصا ذريا"],["١٤٠٥","سجلا منشورا"],["٣","أوراق بحثية"]],
   hEx:"الأساس الوطني",aEx:"تحميل",
   sEx:"كل ضوابط قرار المركز الوطني رقم ٢ لسنة ٢٠٢٦ مجمّعة حسب الوظيفة، واختر ضابطا لتقرأ المتطلب كما طبعه الملحق والفحوص المشتقة منه ومواضع ربطه في ثلاثة أطر دولية.",
   hXw:"الربط مع إطار بنك الكويت المركزي",aXw:"اقرأ المنهج",
@@ -453,7 +464,8 @@ const T={
   f1:"بيانات مفتوحة ومنهج مفتوح، يُبنى من المصدر آليا لا يدويا.",
   f2:"الميثاق",f3:"github.com/SiteQ8",nolic:"دون رخصة",open:"افتح",records:"سجلا قابلا للبحث",
   cmd:"ابحث في كل ضابط وفحص وزوج مرشح",
-  gCtl:"الأساس الوطني",gCorf:"إطار بنك الكويت المركزي",gXw:"مرشحات الربط",gPrj:"المشاريع",
+  gCtl:"الأساس الوطني",gCorf:"إطار بنك الكويت المركزي",gXw:"مرشحات الربط",
+  gLex:"المعجم",gPrj:"المشاريع",lexA:"مثبت",lexD:"مشتق",
   loading:"تُحمَّل المدونات الأكبر، وستتسع النتائج بعد قليل.",
   noHit:"لا نتائج.",
   cf:{strong:"قوية",moderate:"متوسطة",weak:"ضعيفة"},
@@ -630,15 +642,16 @@ function row(p){
 
 /* ---- Lazy corpora. The page paints from embedded data, then pulls the larger
    corpora in the background so search can reach all 1,133 records. ---- */
-let CORF=null, XW=null;
+let CORF=null, XW=null, LEX=null;
 async function lazy(){
   const grab=async u=>{try{const r=await fetch(u);return r.ok?await r.json():null;}catch(e){return null;}};
-  const got=await Promise.all([grab("data/corf-lite.json"),grab("data/xwalk-lite.json")]);
-  CORF=got[0];XW=got[1];
+  const got=await Promise.all([grab("data/corf-lite.json"),grab("data/xwalk-lite.json"),
+    grab("data/lex-lite.json")]);
+  CORF=got[0];XW=got[1];LEX=got[2];
   paintScope();paintReview();if(el("cmd").value.trim())doSearch();
 }
 function paintScope(){
-  const s=t(),n=44+(CORF?CORF.n:0)+(XW?XW.p.length:0);
+  const s=t(),n=44+(CORF?CORF.n:0)+(XW?XW.p.length:0)+(LEX?LEX.a.length+LEX.d.length:0);
   el("cmd-s").textContent=n.toLocaleString(L()?"ar-EG":"en")+" "+s.records;
 }
 
@@ -706,6 +719,23 @@ function doSearch(){
         '<span class="conf '+p.cf+'">'+s.cf[p.cf]+'</span><em>'+hl(p.tx,term)+'</em></a>';
     });
     if(h.length)G.push([s.gXw,h]);
+  }
+
+  if(LEX){
+    const h=[];
+    LEX.a.forEach(function(x){
+      if((x.e+" "+x.r).toLowerCase().indexOf(term)>-1)
+        h.push('<button class="hit" onclick="goCtl(\''+x.c+'\')"><b dir="ltr">'+esc(x.c)+
+          '</b><span>'+esc(L()?x.r:x.e)+'</span><em dir="'+(L()?"ltr":"rtl")+
+          '" style="text-align:start">'+esc(L()?x.e:x.r)+' &middot; '+s.lexA+'</em></button>');
+    });
+    LEX.d.forEach(function(x){
+      if(h.length<20&&(x.e+" "+x.r).toLowerCase().indexOf(term)>-1)
+        h.push('<div class="hit"><b dir="ltr">'+esc(x.s)+'</b><span>'+esc(L()?x.r:x.e)+
+          '</span><em dir="'+(L()?"ltr":"rtl")+'" style="text-align:start">'+
+          esc(L()?x.e:x.r)+' &middot; '+s.lexD+'</em></div>');
+    });
+    if(h.length)G.push([s.gLex,h.slice(0,20)]);
   }
 
   const prj=DATA.projects.filter(function(p){
