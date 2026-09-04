@@ -11,6 +11,7 @@ on it, cite it, or check it.
 | [`kw-nbcc`](kw-nbcc/) | Kuwait National Basic Cybersecurity Controls, NCSC Decision No. 2 of 2026 | 44 controls | JSON, CSV |
 | [`kw-corf`](kw-corf/) | CBK Cyber and Operational Resilience Framework v1.0 | 874 controls | JSON, CSV |
 | [`kw-crosswalk`](kw-crosswalk/) | Proposed national baseline to CBK mapping, **unreviewed** | 215 candidate pairs | JSON |
+| [`kw-lexicon`](kw-lexicon/) | Bilingual security vocabulary from the baseline's parallel text | 44 attested, 228 derived | JSON, CSV |
 
 ## The provenance rule
 
@@ -44,15 +45,33 @@ file. The method behind it is validated in
 ```
 node scripts/build_corpus.mjs /path/to/Kuwait-NBCC
 python3 scripts/build_crosswalk.py
+python3 scripts/build_lexicon.py
 python3 scripts/validate_corpus.py
 ```
 
 ## Known limitations
 
 The CORF source catalogue reports 876 official controls and yields 874 on
-extraction. Two controls are unaccounted for. The gap is recorded here rather
-than rounded away, and the dataset should not be treated as complete until it is
-resolved.
+extraction. That gap was investigated rather than left as a round number, and
+what is now known narrows it considerably without closing it.
+
+An exhaustive walk of the source, following every path rather than the expected
+one, finds the same 874, so nothing is lost in flattening. Control identifiers
+run contiguously within every area, so no control is missing from the middle of
+a sequence. The domain and subdomain counts match the 25 and 93 the source
+declares, so no structural node is absent.
+
+What remains is that the figure of 876 is a claim in the source's own count
+object which the structure does not corroborate. Either two controls failed to
+extract at a position that leaves no trace, most likely at the end of an area,
+or the figure itself is wrong. Settling it requires the framework as issued by
+the Central Bank, which this centre does not hold. Until then the dataset should
+not be treated as complete.
+
+The derived half of `kw-lexicon` is unreviewed and its validation recovery is
+0.808, so roughly one derived entry in five is expected to be wrong. Attested
+entries are the regulator's own equivalences and are traceable to a control
+identifier.
 
 The `kw-corf` records are English only, because the framework was issued in
 English. The `kw-nbcc` records are complete in both languages.

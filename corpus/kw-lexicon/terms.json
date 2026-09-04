@@ -1,0 +1,1660 @@
+{
+  "dataset": "kw-lexicon",
+  "title": "Bilingual cybersecurity lexicon, derived from the Kuwait national baseline",
+  "titleAr": "معجم ثنائي اللغة للأمن السيبراني مشتق من الأساس الوطني الكويتي",
+  "licence": "MIT",
+  "provenance": {
+    "note": "Attested pairs are the regulator's own equivalences, taken from control titles. Derived pairs are inferred by this centre from co-occurrence and carry no authority.",
+    "noteAr": "الأزواج المُثبتة هي مقابلات المنظِّم نفسه مأخوذة من عناوين الضوابط، أما الأزواج المشتقة فاستنتجها المركز من التلازم ولا تحمل أي صفة رسمية."
+  },
+  "method": {
+    "segments": 373,
+    "description": "Dice coefficient over segment level co-occurrence, requiring a term to appear in at least 3 segments and to reach 0.72 agreement.",
+    "validation": {
+      "title_pairs": 44,
+      "repeated_en_terms": 26,
+      "aligned_at_threshold": 21,
+      "recovery_rate": 0.808
+    }
+  },
+  "counts": {
+    "attested": 44,
+    "derived": 228
+  },
+  "attested": [
+    {
+      "en": "Governance & Roles",
+      "ar": "الحوكمة والأدوار",
+      "source": "attested",
+      "control": "GOV-1"
+    },
+    {
+      "en": "Policies & Exception Management",
+      "ar": "السياسات وإدارة الاستثناءات",
+      "source": "attested",
+      "control": "GOV-2"
+    },
+    {
+      "en": "Data Classification & Sovereignty",
+      "ar": "تصنيف البيانات وسيادتها",
+      "source": "attested",
+      "control": "GOV-3"
+    },
+    {
+      "en": "Kuwaitization & Vetting for Cyber Roles",
+      "ar": "التكويت والمسح الأمني للأدوار السيبرانية",
+      "source": "attested",
+      "control": "GOV-4"
+    },
+    {
+      "en": "Periodic Self-Assessment & Continuous Improvement",
+      "ar": "التقييم الذاتي الدوري والتحسين المستمر",
+      "source": "attested",
+      "control": "GOV-5"
+    },
+    {
+      "en": "Service Provider & Outsourcing Governance",
+      "ar": "حوكمة مزودي الخدمة والإسناد الخارجي",
+      "source": "attested",
+      "control": "GOV-6"
+    },
+    {
+      "en": "Asset & Service Inventory",
+      "ar": "حصر الأصول والخدمات",
+      "source": "attested",
+      "control": "ID-1"
+    },
+    {
+      "en": "Software & Provider Inventory",
+      "ar": "حصر البرمجيات ومزودي الخدمة",
+      "source": "attested",
+      "control": "ID-2"
+    },
+    {
+      "en": "Data & Account Inventory",
+      "ar": "حصر البيانات والحسابات",
+      "source": "attested",
+      "control": "ID-3"
+    },
+    {
+      "en": "Secure Configuration, Hardening & Network Segmentation",
+      "ar": "التهيئة الآمنة والتحصين وتجزئة الشبكة",
+      "source": "attested",
+      "control": "PR-1"
+    },
+    {
+      "en": "Network Segmentation",
+      "ar": "تجزئة الشبكة",
+      "source": "attested",
+      "control": "PR-1.1"
+    },
+    {
+      "en": "Vulnerability Management & Patching",
+      "ar": "إدارة الثغرات والتحديثات الأمنية",
+      "source": "attested",
+      "control": "PR-1.2"
+    },
+    {
+      "en": "Identity, Authentication & Password Hygiene",
+      "ar": "الهوية والمصادقة وسلامة كلمات المرور",
+      "source": "attested",
+      "control": "PR-2"
+    },
+    {
+      "en": "Corporate Email Only & Personal Email Ban",
+      "ar": "قصر المراسلات على البريد المؤسسي ومنع البريد الشخصي",
+      "source": "attested",
+      "control": "PR-2.1"
+    },
+    {
+      "en": "Password Manager & Credential Hygiene",
+      "ar": "مدير كلمات المرور وسلامة بيانات الاعتماد",
+      "source": "attested",
+      "control": "PR-2.2"
+    },
+    {
+      "en": "Awareness & Human Factors",
+      "ar": "التوعية والعوامل البشرية",
+      "source": "attested",
+      "control": "PR-3"
+    },
+    {
+      "en": "Official Social Media & Digital Presence",
+      "ar": "الحسابات الرسمية والحضور الرقمي",
+      "source": "attested",
+      "control": "PR-3.1"
+    },
+    {
+      "en": "Malware, Email & Web Protection",
+      "ar": "الحماية من البرمجيات الخبيثة وحماية البريد والويب",
+      "source": "attested",
+      "control": "PR-4"
+    },
+    {
+      "en": "Approved Communication & Videoconferencing Platforms",
+      "ar": "منصات التواصل والاجتماعات المرئية المعتمدة",
+      "source": "attested",
+      "control": "PR-4.1"
+    },
+    {
+      "en": "Portable Media Device Control",
+      "ar": "التحكم في وسائط التخزين الخارجية",
+      "source": "attested",
+      "control": "PR-4.2"
+    },
+    {
+      "en": "Data Protection, Backup & Lifecycle",
+      "ar": "حماية البيانات والنسخ الاحتياطي ودورة حياتها",
+      "source": "attested",
+      "control": "PR-5"
+    },
+    {
+      "en": "Physical Protection of Critical IT Assets",
+      "ar": "الحماية المادية للأصول التقنية الحرجة",
+      "source": "attested",
+      "control": "PR-6"
+    },
+    {
+      "en": "Audit Logging & Monitoring",
+      "ar": "تسجيل الأحداث والمراقبة",
+      "source": "attested",
+      "control": "DE-1"
+    },
+    {
+      "en": "Time Synchronization",
+      "ar": "مزامنة الوقت",
+      "source": "attested",
+      "control": "DE-2"
+    },
+    {
+      "en": "Incident Reporting to NCSC & Leadership",
+      "ar": "الإبلاغ عن الحوادث للمركز وللإدارة العليا",
+      "source": "attested",
+      "control": "RS-1"
+    },
+    {
+      "en": "Basic Incident Handling & Coordination",
+      "ar": "التعامل الأساسي مع الحوادث والتنسيق بشأنها",
+      "source": "attested",
+      "control": "RS-2"
+    },
+    {
+      "en": "Recovery Planning",
+      "ar": "التخطيط للتعافي",
+      "source": "attested",
+      "control": "RC-1"
+    },
+    {
+      "en": "Testing & Continuous Improvement",
+      "ar": "الاختبار والتحسين المستمر",
+      "source": "attested",
+      "control": "RC-2"
+    },
+    {
+      "en": "Regulatory Authorization",
+      "ar": "الترخيص التنظيمي",
+      "source": "attested",
+      "control": "CLD-1"
+    },
+    {
+      "en": "Provider Due Diligence",
+      "ar": "العناية الواجبة بمزود الخدمة",
+      "source": "attested",
+      "control": "CLD-2"
+    },
+    {
+      "en": "Right to Audit (Third-Party Assurance)",
+      "ar": "حق التدقيق (تأكيدات الأطراف الخارجية)",
+      "source": "attested",
+      "control": "CLD-3"
+    },
+    {
+      "en": "Incident Notification Clause",
+      "ar": "شرط الإخطار بالحوادث",
+      "source": "attested",
+      "control": "CLD-4"
+    },
+    {
+      "en": "Data Ownership & Exit",
+      "ar": "ملكية البيانات وإنهاء الخدمة",
+      "source": "attested",
+      "control": "CLD-5"
+    },
+    {
+      "en": "Service Level Agreements (SLAs)",
+      "ar": "اتفاقيات مستوى الخدمة (SLA)",
+      "source": "attested",
+      "control": "CLD-6"
+    },
+    {
+      "en": "Shared Responsibility Matrix",
+      "ar": "مصفوفة المسؤولية المشتركة",
+      "source": "attested",
+      "control": "CLD-7"
+    },
+    {
+      "en": "Cloud Asset Inventory",
+      "ar": "حصر الأصول السحابية",
+      "source": "attested",
+      "control": "CLD-8"
+    },
+    {
+      "en": "MFA for Cloud Consoles",
+      "ar": "المصادقة متعددة العوامل للوحات التحكم السحابية",
+      "source": "attested",
+      "control": "CLD-9"
+    },
+    {
+      "en": "Service Account Hygiene",
+      "ar": "سلامة حسابات الخدمة",
+      "source": "attested",
+      "control": "CLD-10"
+    },
+    {
+      "en": "Encryption by Default",
+      "ar": "التشفير الافتراضي",
+      "source": "attested",
+      "control": "CLD-11"
+    },
+    {
+      "en": "Data Residency (Customer Content)",
+      "ar": "توطين البيانات (محتوى العميل)",
+      "source": "attested",
+      "control": "CLD-12"
+    },
+    {
+      "en": "Operational Metadata Exemption",
+      "ar": "استثناء البيانات الوصفية التشغيلية",
+      "source": "attested",
+      "control": "CLD-13"
+    },
+    {
+      "en": "Public Access Prevention",
+      "ar": "منع الوصول العام",
+      "source": "attested",
+      "control": "CLD-14"
+    },
+    {
+      "en": "Cloud Audit Logging",
+      "ar": "تسجيل الأحداث السحابية",
+      "source": "attested",
+      "control": "CLD-15"
+    },
+    {
+      "en": "Secure Connectivity",
+      "ar": "الاتصال الآمن",
+      "source": "attested",
+      "control": "CLD-16"
+    }
+  ],
+  "derived": [
+    {
+      "en": "critical",
+      "ar": "الحرجة",
+      "score": 1.0,
+      "segments": 20
+    },
+    {
+      "en": "email",
+      "ar": "البريد",
+      "score": 1.0,
+      "segments": 20
+    },
+    {
+      "en": "mfa",
+      "ar": "المصادقة متعددة العوامل",
+      "score": 1.0,
+      "segments": 16
+    },
+    {
+      "en": "incident response",
+      "ar": "للاستجابة الحوادث",
+      "score": 1.0,
+      "segments": 11
+    },
+    {
+      "en": "responsibilities",
+      "ar": "والمسؤوليات",
+      "score": 1.0,
+      "segments": 10
+    },
+    {
+      "en": "training",
+      "ar": "التدريب",
+      "score": 1.0,
+      "segments": 10
+    },
+    {
+      "en": "media",
+      "ar": "وسائط",
+      "score": 1.0,
+      "segments": 10
+    },
+    {
+      "en": "exception",
+      "ar": "استثناء",
+      "score": 1.0,
+      "segments": 9
+    },
+    {
+      "en": "content",
+      "ar": "محتوى",
+      "score": 1.0,
+      "segments": 9
+    },
+    {
+      "en": "logging",
+      "ar": "تسجيل",
+      "score": 1.0,
+      "segments": 9
+    },
+    {
+      "en": "activity",
+      "ar": "النشاط",
+      "score": 1.0,
+      "segments": 8
+    },
+    {
+      "en": "policy exists",
+      "ar": "سياسة مكتوبة",
+      "score": 1.0,
+      "segments": 7
+    },
+    {
+      "en": "framework",
+      "ar": "الإطار",
+      "score": 1.0,
+      "segments": 7
+    },
+    {
+      "en": "training covers",
+      "ar": "يغطي التدريب",
+      "score": 1.0,
+      "segments": 7
+    },
+    {
+      "en": "audit logging",
+      "ar": "تسجيل التدقيق",
+      "score": 1.0,
+      "segments": 7
+    },
+    {
+      "en": "lessons learned",
+      "ar": "المستفادة",
+      "score": 1.0,
+      "segments": 7
+    },
+    {
+      "en": "plan",
+      "ar": "الخطة",
+      "score": 1.0,
+      "segments": 7
+    },
+    {
+      "en": "roles and responsibilities",
+      "ar": "الأدوار والمسؤوليات",
+      "score": 1.0,
+      "segments": 6
+    },
+    {
+      "en": "kuwait",
+      "ar": "الكويت",
+      "score": 1.0,
+      "segments": 6
+    },
+    {
+      "en": "data classification framework",
+      "ar": "الإطار الوطني لتصنيف",
+      "score": 1.0,
+      "segments": 6
+    },
+    {
+      "en": "least monthly",
+      "ar": "شهريا",
+      "score": 1.0,
+      "segments": 6
+    },
+    {
+      "en": "after major changes",
+      "ar": "التغييرات الجوهرية",
+      "score": 1.0,
+      "segments": 6
+    },
+    {
+      "en": "interfaces",
+      "ar": "واجهات الإدارة",
+      "score": 1.0,
+      "segments": 6
+    },
+    {
+      "en": "explicitly",
+      "ar": "صراحة",
+      "score": 1.0,
+      "segments": 6
+    },
+    {
+      "en": "domains",
+      "ar": "نطاقات",
+      "score": 1.0,
+      "segments": 6
+    },
+    {
+      "en": "sensitive and restricted",
+      "ar": "والمقيدة",
+      "score": 1.0,
+      "segments": 6
+    },
+    {
+      "en": "official accounts",
+      "ar": "الحسابات الرسمية",
+      "score": 1.0,
+      "segments": 6
+    },
+    {
+      "en": "procedure covers",
+      "ar": "يغطي الإجراء",
+      "score": 1.0,
+      "segments": 6
+    },
+    {
+      "en": "customer content",
+      "ar": "محتوى العميل",
+      "score": 1.0,
+      "segments": 6
+    },
+    {
+      "en": "responsibilities are documented",
+      "ar": "والمسؤوليات موثقة",
+      "score": 1.0,
+      "segments": 5
+    },
+    {
+      "en": "decision",
+      "ar": "للقرار رقم لسنة",
+      "score": 1.0,
+      "segments": 5
+    },
+    {
+      "en": "sensitive cyber roles",
+      "ar": "الأدوار السيبرانية الحساسة",
+      "score": 1.0,
+      "segments": 5
+    },
+    {
+      "en": "incident reporting",
+      "ar": "الإبلاغ الحوادث",
+      "score": 1.0,
+      "segments": 5
+    },
+    {
+      "en": "asset record captures",
+      "ar": "سجل أصل",
+      "score": 1.0,
+      "segments": 5
+    },
+    {
+      "en": "register records",
+      "ar": "يبين",
+      "score": 1.0,
+      "segments": 5
+    },
+    {
+      "en": "hardened configuration baselines",
+      "ar": "مرجعية محصنة",
+      "score": 1.0,
+      "segments": 5
+    },
+    {
+      "en": "scans",
+      "ar": "الفحوص",
+      "score": 1.0,
+      "segments": 5
+    },
+    {
+      "en": "corporate email",
+      "ar": "البريد مؤسسي",
+      "score": 1.0,
+      "segments": 5
+    },
+    {
+      "en": "audit logging enabled",
+      "ar": "تسجيل التدقيق مفعل",
+      "score": 1.0,
+      "segments": 5
+    },
+    {
+      "en": "contracts",
+      "ar": "العقود",
+      "score": 1.0,
+      "segments": 5
+    },
+    {
+      "en": "contract",
+      "ar": "عقد",
+      "score": 1.0,
+      "segments": 5
+    },
+    {
+      "en": "model",
+      "ar": "النموذج",
+      "score": 1.0,
+      "segments": 5
+    },
+    {
+      "en": "acceptable use",
+      "ar": "استخدام المقبول",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "outside kuwait",
+      "ar": "خارج الكويت",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "carry",
+      "ar": "تحمل",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "offboarding",
+      "ar": "إنهاء التعاقد",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "criticality",
+      "ar": "الحرجية",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "saas",
+      "ar": "كخدمة",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "entry",
+      "ar": "مدخل",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "days",
+      "ar": "تسعين يوما",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "key applications",
+      "ar": "التطبيقات الرئيسية",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "configuration baselines exist",
+      "ar": "توجد إعدادات مرجعية",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "vulnerability",
+      "ar": "الثغرات",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "important",
+      "ar": "المهمة",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "where practical",
+      "ar": "كان ذلك عمليا",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "corporate devices",
+      "ar": "الأجهزة الجهة",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "email accounts",
+      "ar": "الحسابات البريد",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "suspicious activity",
+      "ar": "النشاط مشبوه",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "endpoint protection",
+      "ar": "حماية الأجهزة",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "email domains",
+      "ar": "نطاقات البريد",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "critical areas",
+      "ar": "التقنية الحرجة",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "months",
+      "ar": "عشر شهرا",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "clocks reliable authoritative",
+      "ar": "زمني موثوق",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "periodically",
+      "ar": "دوريا",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "promptly",
+      "ar": "فورا",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "improvements",
+      "ar": "التحسينات",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "tests",
+      "ar": "اختبارات",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "independent",
+      "ar": "المستقلة",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "accountability",
+      "ar": "كان النموذج",
+      "score": 1.0,
+      "segments": 4
+    },
+    {
+      "en": "structure",
+      "ar": "هيكل",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "formally",
+      "ar": "رسميا",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "mfa implemented",
+      "ar": "مطبقة",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "simple list",
+      "ar": "قائمة مبسطة",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "hire into sensitive",
+      "ar": "التعيين الأدوار",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "dates",
+      "ar": "والتواريخ",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "set record carries",
+      "ar": "سجل مجموعة",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "offboarding actions",
+      "ar": "إجراءات إنهاء التعاقد",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "laptops",
+      "ar": "والحواسيب",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "unauthorized software",
+      "ar": "البرمجيات غير المصرح",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "system role",
+      "ar": "اللازمة لدور نظام",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "firewall",
+      "ar": "جدار",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "user networks",
+      "ar": "شبكات المستخدمين",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "explicitly authorized",
+      "ar": "الأقل الصلاحيات",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "more",
+      "ar": "أكثر",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "short",
+      "ar": "موجزة",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "monthly supported systems",
+      "ar": "الأنظمة المدعومة",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "scan",
+      "ar": "فحص",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "key systems",
+      "ar": "الأنظمة الرئيسية",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "different systems",
+      "ar": "الأنظمة مختلفة",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "screen",
+      "ar": "للشاشة",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "minutes inactivity",
+      "ar": "الخمول",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "compromise",
+      "ar": "اختراق",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "admin accounts",
+      "ar": "الحسابات الإدارية",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "consumer email accounts",
+      "ar": "الاستهلاكي",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "passwords are not",
+      "ar": "كلمات المرور تتبادل",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "phishing",
+      "ar": "والتصيد",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "naming",
+      "ar": "تسمية",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "common malicious content",
+      "ar": "محتوى الخبيث الشائع",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "attachments",
+      "ar": "والمرفقات",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "configured entity email",
+      "ar": "البريد الجهة",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "staff are trained",
+      "ar": "الموظفون مدربون",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "locked room cabinet",
+      "ar": "خزانة مقفلة",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "requirements",
+      "ar": "المتطلبات",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "disposal",
+      "ar": "الإتلاف",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "backup data",
+      "ar": "البيانات النسخ الاحتياطي",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "remain non sensitive",
+      "ar": "تبقى",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "events",
+      "ar": "الأحداث",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "live",
+      "ar": "حية",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "logs are retained",
+      "ar": "تحفظ السجلات",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "channels",
+      "ar": "القنوات",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "guidance",
+      "ar": "إرشادات",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "sequencing",
+      "ar": "ترتيب",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "agreed",
+      "ar": "المتفق",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "every cloud contract",
+      "ar": "عقد سحابي",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "availability",
+      "ar": "بالإتاحة",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "agreement",
+      "ar": "الاتفاقية",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "accepts accountability",
+      "ar": "الجهة بمسؤوليتها",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "metadata",
+      "ar": "البيانات الوصفية",
+      "score": 1.0,
+      "segments": 3
+    },
+    {
+      "en": "least",
+      "ar": "الأقل",
+      "score": 0.99,
+      "segments": 52
+    },
+    {
+      "en": "key",
+      "ar": "الرئيسية",
+      "score": 0.973,
+      "segments": 18
+    },
+    {
+      "en": "access",
+      "ar": "الوصول",
+      "score": 0.971,
+      "segments": 35
+    },
+    {
+      "en": "ncsc",
+      "ar": "المركز",
+      "score": 0.968,
+      "segments": 15
+    },
+    {
+      "en": "official",
+      "ar": "الرسمية",
+      "score": 0.963,
+      "segments": 14
+    },
+    {
+      "en": "audit",
+      "ar": "التدقيق",
+      "score": 0.957,
+      "segments": 11
+    },
+    {
+      "en": "risk",
+      "ar": "المخاطر",
+      "score": 0.952,
+      "segments": 11
+    },
+    {
+      "en": "tools",
+      "ar": "أدوات",
+      "score": 0.947,
+      "segments": 10
+    },
+    {
+      "en": "sensitive",
+      "ar": "الحساسة",
+      "score": 0.941,
+      "segments": 35
+    },
+    {
+      "en": "systems",
+      "ar": "الأنظمة",
+      "score": 0.933,
+      "segments": 28
+    },
+    {
+      "en": "covers",
+      "ar": "يغطي",
+      "score": 0.933,
+      "segments": 16
+    },
+    {
+      "en": "portable media",
+      "ar": "وسائط التخزين الخارجية",
+      "score": 0.933,
+      "segments": 7
+    },
+    {
+      "en": "accounts",
+      "ar": "الحسابات",
+      "score": 0.923,
+      "segments": 32
+    },
+    {
+      "en": "services",
+      "ar": "الخدمات",
+      "score": 0.923,
+      "segments": 12
+    },
+    {
+      "en": "enabled",
+      "ar": "مفعل",
+      "score": 0.923,
+      "segments": 7
+    },
+    {
+      "en": "keys",
+      "ar": "مفاتيح",
+      "score": 0.923,
+      "segments": 7
+    },
+    {
+      "en": "software",
+      "ar": "البرمجيات",
+      "score": 0.923,
+      "segments": 6
+    },
+    {
+      "en": "changes",
+      "ar": "التغييرات",
+      "score": 0.917,
+      "segments": 13
+    },
+    {
+      "en": "servers",
+      "ar": "الخوادم",
+      "score": 0.917,
+      "segments": 11
+    },
+    {
+      "en": "service",
+      "ar": "الخدمة",
+      "score": 0.912,
+      "segments": 26
+    },
+    {
+      "en": "written",
+      "ar": "مكتوبة",
+      "score": 0.909,
+      "segments": 12
+    },
+    {
+      "en": "policy",
+      "ar": "سياسة",
+      "score": 0.909,
+      "segments": 12
+    },
+    {
+      "en": "platforms",
+      "ar": "المنصات",
+      "score": 0.909,
+      "segments": 5
+    },
+    {
+      "en": "simple",
+      "ar": "مبسطة",
+      "score": 0.9,
+      "segments": 11
+    },
+    {
+      "en": "supported",
+      "ar": "المدعومة",
+      "score": 0.9,
+      "segments": 11
+    },
+    {
+      "en": "procedure",
+      "ar": "الإجراء",
+      "score": 0.9,
+      "segments": 9
+    },
+    {
+      "en": "line",
+      "ar": "يتفق",
+      "score": 0.889,
+      "segments": 5
+    },
+    {
+      "en": "physical",
+      "ar": "المادية",
+      "score": 0.889,
+      "segments": 5
+    },
+    {
+      "en": "least quarterly",
+      "ar": "ربع",
+      "score": 0.889,
+      "segments": 5
+    },
+    {
+      "en": "one",
+      "ar": "واحد",
+      "score": 0.889,
+      "segments": 5
+    },
+    {
+      "en": "regulations",
+      "ar": "الوطنية",
+      "score": 0.889,
+      "segments": 4
+    },
+    {
+      "en": "servers workstations",
+      "ar": "ومحطات العمل",
+      "score": 0.889,
+      "segments": 4
+    },
+    {
+      "en": "business owner",
+      "ar": "الجهة الأعمال",
+      "score": 0.889,
+      "segments": 4
+    },
+    {
+      "en": "administrative access",
+      "ar": "الوصول الإداري",
+      "score": 0.889,
+      "segments": 4
+    },
+    {
+      "en": "least annually",
+      "ar": "سنويا على الأقل",
+      "score": 0.88,
+      "segments": 22
+    },
+    {
+      "en": "unauthorized",
+      "ar": "المصرح",
+      "score": 0.88,
+      "segments": 11
+    },
+    {
+      "en": "contact",
+      "ar": "البيانات الاتصال",
+      "score": 0.875,
+      "segments": 9
+    },
+    {
+      "en": "identity",
+      "ar": "الهوية",
+      "score": 0.875,
+      "segments": 7
+    },
+    {
+      "en": "restoration",
+      "ar": "استعادة",
+      "score": 0.875,
+      "segments": 7
+    },
+    {
+      "en": "where feasible",
+      "ar": "متى أمكن",
+      "score": 0.87,
+      "segments": 12
+    },
+    {
+      "en": "roles",
+      "ar": "الأدوار",
+      "score": 0.867,
+      "segments": 14
+    },
+    {
+      "en": "data",
+      "ar": "البيانات",
+      "score": 0.865,
+      "segments": 64
+    },
+    {
+      "en": "protected",
+      "ar": "محمية",
+      "score": 0.857,
+      "segments": 7
+    },
+    {
+      "en": "assessment",
+      "ar": "التقييم",
+      "score": 0.857,
+      "segments": 6
+    },
+    {
+      "en": "implement",
+      "ar": "وتطبق",
+      "score": 0.857,
+      "segments": 4
+    },
+    {
+      "en": "examples",
+      "ar": "وأمثلة",
+      "score": 0.857,
+      "segments": 4
+    },
+    {
+      "en": "assets",
+      "ar": "الأصول",
+      "score": 0.857,
+      "segments": 4
+    },
+    {
+      "en": "exposed",
+      "ar": "المكشوفة",
+      "score": 0.857,
+      "segments": 4
+    },
+    {
+      "en": "protect",
+      "ar": "وتحمي",
+      "score": 0.857,
+      "segments": 4
+    },
+    {
+      "en": "least one",
+      "ar": "واحد على الأقل",
+      "score": 0.857,
+      "segments": 4
+    },
+    {
+      "en": "details are current",
+      "ar": "الاتصال محدثة",
+      "score": 0.857,
+      "segments": 3
+    },
+    {
+      "en": "high",
+      "ar": "العالية",
+      "score": 0.857,
+      "segments": 3
+    },
+    {
+      "en": "require least characters",
+      "ar": "محمية المصادقة",
+      "score": 0.857,
+      "segments": 3
+    },
+    {
+      "en": "use email",
+      "ar": "الآمن البريد",
+      "score": 0.857,
+      "segments": 3
+    },
+    {
+      "en": "approved platforms",
+      "ar": "المنصات المعتمدة",
+      "score": 0.857,
+      "segments": 3
+    },
+    {
+      "en": "list",
+      "ar": "قائمة",
+      "score": 0.846,
+      "segments": 12
+    },
+    {
+      "en": "not needed",
+      "ar": "اللازمة",
+      "score": 0.833,
+      "segments": 5
+    },
+    {
+      "en": "backups",
+      "ar": "الاحتياطية",
+      "score": 0.833,
+      "segments": 5
+    },
+    {
+      "en": "minimum",
+      "ar": "أدنى",
+      "score": 0.824,
+      "segments": 7
+    },
+    {
+      "en": "maintain",
+      "ar": "تحفظ الجهة",
+      "score": 0.8,
+      "segments": 12
+    },
+    {
+      "en": "inventory",
+      "ar": "حصر",
+      "score": 0.8,
+      "segments": 12
+    },
+    {
+      "en": "can",
+      "ar": "يمكن",
+      "score": 0.8,
+      "segments": 6
+    },
+    {
+      "en": "unique",
+      "ar": "فريدة",
+      "score": 0.8,
+      "segments": 6
+    },
+    {
+      "en": "equipment",
+      "ar": "المعدات",
+      "score": 0.8,
+      "segments": 6
+    },
+    {
+      "en": "disabled",
+      "ar": "معطلة",
+      "score": 0.8,
+      "segments": 6
+    },
+    {
+      "en": "personal",
+      "ar": "الشخصية",
+      "score": 0.8,
+      "segments": 6
+    },
+    {
+      "en": "secure",
+      "ar": "الآمنة",
+      "score": 0.8,
+      "segments": 5
+    },
+    {
+      "en": "service accounts",
+      "ar": "الحسابات الخدمة",
+      "score": 0.8,
+      "segments": 5
+    },
+    {
+      "en": "manager",
+      "ar": "مدير",
+      "score": 0.8,
+      "segments": 4
+    },
+    {
+      "en": "sensitive data",
+      "ar": "البيانات الحساسة",
+      "score": 0.774,
+      "segments": 14
+    },
+    {
+      "en": "actions",
+      "ar": "إجراءات",
+      "score": 0.774,
+      "segments": 12
+    },
+    {
+      "en": "reporting",
+      "ar": "الإبلاغ",
+      "score": 0.769,
+      "segments": 10
+    },
+    {
+      "en": "reviewed",
+      "ar": "تراجع",
+      "score": 0.765,
+      "segments": 20
+    },
+    {
+      "en": "backup",
+      "ar": "النسخ الاحتياطي",
+      "score": 0.762,
+      "segments": 13
+    },
+    {
+      "en": "management",
+      "ar": "الإدارة",
+      "score": 0.757,
+      "segments": 20
+    },
+    {
+      "en": "shared",
+      "ar": "المشتركة",
+      "score": 0.75,
+      "segments": 10
+    },
+    {
+      "en": "owner",
+      "ar": "مالك",
+      "score": 0.75,
+      "segments": 10
+    },
+    {
+      "en": "critical systems",
+      "ar": "الأنظمة الحرجة",
+      "score": 0.75,
+      "segments": 10
+    },
+    {
+      "en": "example",
+      "ar": "مثلا",
+      "score": 0.75,
+      "segments": 9
+    },
+    {
+      "en": "user",
+      "ar": "المستخدمين",
+      "score": 0.75,
+      "segments": 9
+    },
+    {
+      "en": "passwords",
+      "ar": "المرور",
+      "score": 0.75,
+      "segments": 9
+    },
+    {
+      "en": "controls",
+      "ar": "ضوابط",
+      "score": 0.75,
+      "segments": 8
+    },
+    {
+      "en": "location",
+      "ar": "موقع",
+      "score": 0.75,
+      "segments": 8
+    },
+    {
+      "en": "cybersecurity",
+      "ar": "السيبراني",
+      "score": 0.75,
+      "segments": 5
+    },
+    {
+      "en": "against",
+      "ar": "مقابل",
+      "score": 0.75,
+      "segments": 5
+    },
+    {
+      "en": "establish",
+      "ar": "تنشئ",
+      "score": 0.75,
+      "segments": 5
+    },
+    {
+      "en": "identify",
+      "ar": "مقيدا",
+      "score": 0.75,
+      "segments": 5
+    },
+    {
+      "en": "where supported",
+      "ar": "كانت المدعومة",
+      "score": 0.75,
+      "segments": 5
+    },
+    {
+      "en": "access management",
+      "ar": "الوصول إلى واجهات",
+      "score": 0.75,
+      "segments": 5
+    },
+    {
+      "en": "define",
+      "ar": "تحدد",
+      "score": 0.75,
+      "segments": 4
+    },
+    {
+      "en": "control",
+      "ar": "التحكم",
+      "score": 0.75,
+      "segments": 4
+    },
+    {
+      "en": "policies",
+      "ar": "السياسات",
+      "score": 0.75,
+      "segments": 4
+    },
+    {
+      "en": "accordance",
+      "ar": "وفقا",
+      "score": 0.75,
+      "segments": 4
+    },
+    {
+      "en": "significant",
+      "ar": "جوهري",
+      "score": 0.75,
+      "segments": 4
+    },
+    {
+      "en": "only authorized",
+      "ar": "إلا",
+      "score": 0.75,
+      "segments": 4
+    },
+    {
+      "en": "notify",
+      "ar": "حادث",
+      "score": 0.75,
+      "segments": 4
+    },
+    {
+      "en": "authorities",
+      "ar": "مختصة",
+      "score": 0.75,
+      "segments": 4
+    },
+    {
+      "en": "standard",
+      "ar": "قياسية",
+      "score": 0.75,
+      "segments": 4
+    },
+    {
+      "en": "major",
+      "ar": "الجوهرية",
+      "score": 0.737,
+      "segments": 11
+    },
+    {
+      "en": "information",
+      "ar": "المعلومات",
+      "score": 0.737,
+      "segments": 9
+    },
+    {
+      "en": "protection",
+      "ar": "حماية",
+      "score": 0.737,
+      "segments": 7
+    },
+    {
+      "en": "configuration",
+      "ar": "إعدادات",
+      "score": 0.733,
+      "segments": 17
+    },
+    {
+      "en": "use",
+      "ar": "استخدام",
+      "score": 0.727,
+      "segments": 30
+    },
+    {
+      "en": "review",
+      "ar": "وتراجع",
+      "score": 0.727,
+      "segments": 13
+    },
+    {
+      "en": "using",
+      "ar": "باستخدام",
+      "score": 0.727,
+      "segments": 7
+    },
+    {
+      "en": "handling",
+      "ar": "التعامل",
+      "score": 0.727,
+      "segments": 7
+    },
+    {
+      "en": "resource",
+      "ar": "مورد",
+      "score": 0.727,
+      "segments": 7
+    },
+    {
+      "en": "encryption",
+      "ar": "تشفير",
+      "score": 0.727,
+      "segments": 6
+    },
+    {
+      "en": "csp",
+      "ar": "مزود الخدمة السحابية",
+      "score": 0.727,
+      "segments": 6
+    },
+    {
+      "en": "incident",
+      "ar": "الحوادث",
+      "score": 0.723,
+      "segments": 20
+    }
+  ]
+}
