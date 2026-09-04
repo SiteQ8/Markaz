@@ -58,6 +58,77 @@ html[dir="rtl"] .nm b{letter-spacing:normal}
           letter-spacing:.08em;text-transform:uppercase}
 html[dir="rtl"] .fig span{letter-spacing:normal;text-transform:none;font-size:12.5px}
 
+/* Command bar: search across every corpus at once. */
+.cmd{position:relative;margin-top:22px}
+.cmd input{
+  width:100%;background:linear-gradient(168deg,var(--panel2),var(--panel));
+  border:1px solid var(--rule-hi);color:var(--ink);padding:13px 16px;
+  border-radius:11px;font-size:15px;font-family:inherit;box-shadow:var(--lift);
+}
+.cmd input:focus{outline:none;border-color:var(--go)}
+.cmd input::placeholder{color:var(--faint)}
+.cmd-s{position:absolute;inset-inline-end:14px;top:14px;font-family:var(--mono);
+       font-size:11px;color:var(--faint);pointer-events:none}
+html[dir="rtl"] .cmd-s{font-family:var(--ar)}
+.res{margin-top:11px;border:1px solid var(--rule);border-radius:12px;overflow:hidden;
+     background:linear-gradient(168deg,var(--panel2),var(--panel));box-shadow:var(--lift)}
+.res-g{border-bottom:1px solid var(--rule)}
+.res-g:last-child{border-bottom:0}
+.res-h{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);
+       padding:9px 15px 6px;font-weight:640;display:flex;gap:8px;align-items:baseline}
+html[dir="rtl"] .res-h{letter-spacing:normal;text-transform:none;font-size:12px}
+.res-h u{text-decoration:none;font-family:var(--mono);font-size:10.5px}
+.hit{display:block;padding:9px 15px;border-top:1px solid var(--rule);cursor:pointer;
+     text-decoration:none;color:inherit;text-align:start;background:none;border-inline:0;
+     border-bottom:0;width:100%;font-family:inherit}
+.hit:hover{background:var(--raise)}
+.hit b{font-family:var(--mono);font-size:11.5px;color:var(--go);margin-inline-end:9px}
+.hit span{font-size:13px;color:var(--ink)}
+.hit em{font-style:normal;display:block;font-size:12.3px;color:var(--faint);
+        line-height:1.5;margin-top:2px}
+html[dir="rtl"] .hit em{line-height:1.7;font-size:13px}
+.hit mark{background:rgba(20,200,138,.22);color:var(--go);border-radius:2px;padding:0 1px}
+.loading{padding:11px 15px;font-size:12.5px;color:var(--faint)}
+
+/* Review tool */
+.rev{border-top:1px solid var(--rule)}
+.rev-bar{display:flex;gap:9px;align-items:center;flex-wrap:wrap;padding:13px 16px;
+         border-bottom:1px solid var(--rule)}
+.rev-bar b{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.who{background:var(--raise);border:1px solid var(--rule-hi);color:var(--ink);
+     padding:6px 11px;border-radius:7px;font-size:12.5px;font-family:inherit;min-width:170px}
+.who:focus{outline:none;border-color:var(--go)}
+.btn{background:var(--raise);border:1px solid var(--rule-hi);color:var(--dim);
+     padding:6px 12px;border-radius:7px;cursor:pointer;font-size:12.5px}
+.btn:hover{border-color:var(--go);color:var(--go)}
+.btn.pri{background:var(--go);border-color:var(--go);color:#04120c;font-weight:650}
+.btn.pri:hover{filter:brightness(1.1);color:#04120c}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.pair{padding:14px 16px;border-bottom:1px solid var(--rule)}
+.pair:last-child{border-bottom:0}
+.pair.done{opacity:.5}
+.pair-h{display:flex;gap:9px;align-items:baseline;flex-wrap:wrap;margin-bottom:6px}
+.pair-h b{font-family:var(--mono);font-size:12.5px;font-weight:660}
+.pair-h i{font-style:normal;font-size:13px;color:var(--ink)}
+.pair-h s{text-decoration:none;margin-inline-start:auto;font-family:var(--mono);
+          font-size:11px;color:var(--faint)}
+.conf{font-size:10px;padding:2px 7px;border-radius:99px;border:1px solid}
+.conf.strong{color:var(--go);border-color:#0d5f43;background:#07231a}
+.conf.moderate{color:var(--blue);border-color:#1d3f5c;background:#0a1c28}
+.conf.weak{color:var(--faint);border-color:var(--rule-hi)}
+html[dir="rtl"] .conf{font-family:var(--ar)}
+.pair p{font-size:12.8px;color:var(--dim);line-height:1.55;
+        border-inline-start:2px solid var(--rule-hi);padding-inline-start:11px}
+html[dir="rtl"] .pair p{line-height:1.75;font-size:13.5px}
+.pair-a{display:flex;gap:7px;margin-top:9px;flex-wrap:wrap;align-items:center}
+.note{flex:1;min-width:180px;background:var(--raise);border:1px solid var(--rule);
+      color:var(--ink);padding:6px 10px;border-radius:7px;font-size:12.5px;font-family:inherit}
+.note:focus{outline:none;border-color:var(--go)}
+.verdict{font-family:var(--mono);font-size:11px;padding:3px 9px;border-radius:6px}
+.verdict.ok{color:var(--go);background:#07231a;border:1px solid #0d5f43}
+.verdict.no{color:var(--red);background:#241110;border:1px solid #5c2320}
+html[dir="rtl"] .verdict{font-family:var(--ar)}
+
 /* Section heading */
 .sh{display:flex;align-items:baseline;gap:10px;padding:34px 0 12px}
 .sh h2{font-size:18px;font-weight:660;letter-spacing:-0.02em}
@@ -242,6 +313,11 @@ footer{border-top:1px solid var(--rule);margin-top:38px;padding:20px 0 40px;
   <div class="head">
     <p id="lede"></p>
     <div class="figs" id="figs"></div>
+    <div class="cmd">
+      <input id="cmd" oninput="doSearch()" autocomplete="off" spellcheck="false">
+      <span class="cmd-s" id="cmd-s"></span>
+    </div>
+    <div id="res"></div>
   </div>
 
   <div class="sh"><h2 id="h-ex"></h2><a href="corpus/kw-nbcc/controls.json" id="a-ex"></a></div>
@@ -257,6 +333,12 @@ footer{border-top:1px solid var(--rule);margin-top:38px;padding:20px 0 40px;
   <p class="sub" id="s-xw"></p>
   <div class="panel"><div class="xw">
     <div id="xw-l"></div><div id="xw-r"></div>
+  </div>
+  <div class="rev">
+    <div style="padding:15px 16px 0"><div style="font-size:14.5px;font-weight:640" id="h-rev"></div>
+      <p style="color:var(--faint);font-size:12.8px;max-width:82ch;margin-top:4px" id="s-rev"></p></div>
+    <div class="rev-bar" id="rev-bar"></div>
+    <div id="rev"></div>
   </div></div>
 
   <div class="sh"><h2 id="h-ds"></h2><a href="corpus/" id="a-ds"></a></div>
@@ -335,7 +417,18 @@ const T={
   mir:"Forks and mirrors of work by others, kept for reference. Not research from this centre.",
   none:"Nothing matches that filter.",
   f1:"Open data and open method. Rebuilt from source, not maintained by hand.",
-  f2:"Charter",f3:"github.com/SiteQ8",nolic:"unlicensed",open:"open",records:"records"},
+  f2:"Charter",f3:"github.com/SiteQ8",nolic:"unlicensed",open:"open",records:"records searchable",
+  cmd:"Search every control, check and candidate pair",
+  gCtl:"National baseline",gCorf:"CBK framework",gXw:"Crosswalk candidates",gPrj:"Projects",
+  loading:"Loading the larger corpora, results will widen shortly.",
+  noHit:"Nothing found.",
+  cf:{strong:"strong",moderate:"moderate",weak:"weak"},
+  who:"Your name, required",exp:"Export decisions",
+  why:"Reason for the decision",ok:"Equivalent",no:"Not equivalent",
+  vOk:"confirmed",vNo:"rejected",undo:"undo",
+  srcEn:"quoted from the framework, issued in English only",
+  hRev:"Review the candidates",
+  sRev:"The bottleneck is human judgement. Name yourself, work through a confidence band, and export the decisions as a file to submit. A confirmation without a named reviewer is worth no more than the machine proposal it replaced."},
  ar:{nm:"مركز",tg:"مركز الكويت لأبحاث الأمن السيبراني",btn:"English",
   lede:"توجد الأدوات التشريعية الكويتية في وثائق الجريدة الرسمية أو محبوسة داخل منطق التطبيقات، وينشرها مركز بيانات يمكن الاستعلام عنها واقتباسها والتحقق منها، ثم يصرّح بحدود الثقة في كل نتيجة.",
   figs:[["٤٤","ضابطا في الأساس"],["٣٢٩","فحصا ذريا"],["١١٣٣","سجلا منشورا"],["٢","ورقتان بحثيتان"]],
@@ -358,7 +451,18 @@ const T={
   mir:"نسخ من أعمال آخرين احتُفظ بها للرجوع إليها، وهي ليست بحثا من هذا المركز.",
   none:"لا شيء يطابق هذه التصفية.",
   f1:"بيانات مفتوحة ومنهج مفتوح، يُبنى من المصدر آليا لا يدويا.",
-  f2:"الميثاق",f3:"github.com/SiteQ8",nolic:"دون رخصة",open:"افتح",records:"سجلا"}
+  f2:"الميثاق",f3:"github.com/SiteQ8",nolic:"دون رخصة",open:"افتح",records:"سجلا قابلا للبحث",
+  cmd:"ابحث في كل ضابط وفحص وزوج مرشح",
+  gCtl:"الأساس الوطني",gCorf:"إطار بنك الكويت المركزي",gXw:"مرشحات الربط",gPrj:"المشاريع",
+  loading:"تُحمَّل المدونات الأكبر، وستتسع النتائج بعد قليل.",
+  noHit:"لا نتائج.",
+  cf:{strong:"قوية",moderate:"متوسطة",weak:"ضعيفة"},
+  who:"اسمك، مطلوب",exp:"صدّر القرارات",
+  why:"سبب القرار",ok:"مكافئ",no:"غير مكافئ",
+  vOk:"مؤكد",vNo:"مرفوض",undo:"تراجع",
+  srcEn:"منقول من الإطار الصادر بالإنجليزية وحدها",
+  hRev:"مراجعة المرشحات",
+  sRev:"عنق الزجاجة هو الحكم البشري، لذا سمِّ نفسك ثم اعمل على فئة ثقة واحدة وصدّر القرارات ملفا لتقديمه، لأن تأكيدا بلا مراجع مسمّى لا يزيد قيمة عن الاقتراح الآلي الذي حل محله."}
 };
 
 let lang="en",domain="*",fnFilter="*",sel=null;
@@ -384,12 +488,13 @@ function paint(){
 
   [["h-ex","hEx"],["a-ex","aEx"],["s-ex","sEx"],["h-xw","hXw"],["a-xw","aXw"],["s-xw","sXw"],
    ["h-ds","hDs"],["a-ds","aDs"],["h-pub","hPub"],["a-pub","aPub"],["h-idx","hIdx"],
-   ["h-mir","hMir"],["p-mir","mir"],["f1","f1"],["f2","f2"],["f3","f3"]]
+   ["h-mir","hMir"],["p-mir","mir"],["h-rev","hRev"],["s-rev","sRev"],
+   ["f1","f1"],["f2","f2"],["f3","f3"]]
    .forEach(([id,k])=>el(id).textContent=s[k]);
   el("e-idx").textContent=DATA.stats.projects;
-  el("q").placeholder=s.q;
+  el("q").placeholder=s.q;el("cmd").placeholder=s.cmd;paintScope();
 
-  paintExplorer();paintXwalk();paintSets();paintPubs();paintTabs();
+  paintExplorer();paintXwalk();paintSets();paintPubs();paintTabs();paintReview();
   el("mir").innerHTML=DATA.mirrors.map(m=>'<a href="'+m.url+'" target="_blank" rel="noopener" dir="ltr">'+m.name+'</a>').join("");
 }
 
@@ -522,7 +627,166 @@ function row(p){
     esc(L()?(p.ar||""):(p.description||""))+'</div></a>';
 }
 
-paint();render();
+
+/* ---- Lazy corpora. The page paints from embedded data, then pulls the larger
+   corpora in the background so search can reach all 1,133 records. ---- */
+let CORF=null, XW=null;
+async function lazy(){
+  const grab=async u=>{try{const r=await fetch(u);return r.ok?await r.json():null;}catch(e){return null;}};
+  const got=await Promise.all([grab("data/corf-lite.json"),grab("data/xwalk-lite.json")]);
+  CORF=got[0];XW=got[1];
+  paintScope();paintReview();if(el("cmd").value.trim())doSearch();
+}
+function paintScope(){
+  const s=t(),n=44+(CORF?CORF.n:0)+(XW?XW.p.length:0);
+  el("cmd-s").textContent=n.toLocaleString(L()?"ar-EG":"en")+" "+s.records;
+}
+
+/* ---- Deep links: every control is citable. ---- */
+function readHash(){
+  const h=decodeURIComponent(location.hash.replace(/^#/,""));
+  if(h.indexOf("c/")===0){
+    const id=h.slice(2);
+    if(C.controls.some(x=>x.id===id)){sel=id;fnFilter="*";paintExplorer();
+      setTimeout(function(){el("det").scrollIntoView({block:"center"});},60);}
+  } else if(h.indexOf("q/")===0){el("cmd").value=h.slice(2);doSearch();}
+}
+function setHash(h){
+  if(location.hash!=="#"+h)history.replaceState(null,"",h?"#"+h:location.pathname);
+}
+addEventListener("hashchange",readHash);
+
+/* ---- Global search across every corpus. ---- */
+function hl(txt,term){
+  txt=txt||"";
+  const i=txt.toLowerCase().indexOf(term);
+  if(i<0)return esc(txt.slice(0,150));
+  const a=Math.max(0,i-55),b=Math.min(txt.length,i+term.length+95);
+  return (a>0?"&hellip;":"")+esc(txt.slice(a,i))+"<mark>"+esc(txt.slice(i,i+term.length))+
+         "</mark>"+esc(txt.slice(i+term.length,b))+(b<txt.length?"&hellip;":"");
+}
+function doSearch(){
+  const s=t(),raw=el("cmd").value.trim(),term=raw.toLowerCase();
+  setHash(raw?"q/"+raw:"");
+  if(term.length<2){el("res").innerHTML="";return;}
+  const G=[];
+
+  const ctl=[];
+  C.controls.forEach(function(c){
+    const fields=[c.id,c.t,c.tAr,c.r,c.rAr,c.p||"",c.pAr||"",c.ep||"",c.epAr||""];
+    const inChecks=(c.ck||[]).concat(c.ckAr||[]).filter(function(k){return k.toLowerCase().indexOf(term)>-1;});
+    const hitField=fields.filter(function(f){return f&&f.toLowerCase().indexOf(term)>-1;})[0];
+    if(hitField||inChecks.length){
+      ctl.push('<button class="hit" onclick="goCtl(\''+c.id+'\')">'+
+        '<b dir="ltr">'+esc(c.id)+'</b><span>'+esc(L()?c.tAr:c.t)+'</span><em>'+
+        hl(inChecks[0]||(L()?c.rAr:c.r),term)+'</em></button>');
+    }
+  });
+  if(ctl.length)G.push([s.gCtl,ctl]);
+
+  if(CORF){
+    const h=[];
+    for(let i=0;i<CORF.c.length&&h.length<25;i++){
+      const c=CORF.c[i];
+      if(c.t.toLowerCase().indexOf(term)>-1||c.k.toLowerCase().indexOf(term)>-1){
+        h.push('<a class="hit" href="corpus/kw-corf/controls.json" target="_blank" rel="noopener">'+
+          '<b dir="ltr">'+esc(c.k)+'</b><span>'+esc(c.d||"")+'</span>'+
+          '<em dir="ltr" style="text-align:start">'+hl(c.t,term)+'</em></a>');
+      }
+    }
+    if(h.length)G.push([s.gCorf,h]);
+  }
+
+  if(XW){
+    const h=XW.p.filter(function(p){
+      return (p.n+" "+p.nt+" "+p.c+" "+p.tx).toLowerCase().indexOf(term)>-1;
+    }).slice(0,15).map(function(p){
+      return '<a class="hit" href="corpus/kw-crosswalk/nbcc-corf.json" target="_blank" rel="noopener">'+
+        '<b dir="ltr">'+esc(p.n)+' &rarr; '+esc(p.c)+'</b>'+
+        '<span class="conf '+p.cf+'">'+s.cf[p.cf]+'</span><em>'+hl(p.tx,term)+'</em></a>';
+    });
+    if(h.length)G.push([s.gXw,h]);
+  }
+
+  const prj=DATA.projects.filter(function(p){
+    return (p.name+" "+p.description+" "+p.ar+" "+p.topics.join(" ")).toLowerCase().indexOf(term)>-1;
+  }).slice(0,12).map(function(p){
+    return '<a class="hit" href="'+(p.pages||p.url)+'" target="_blank" rel="noopener">'+
+      '<b dir="ltr">'+esc(p.name)+'</b><em>'+hl(L()?(p.ar||""):(p.description||""),term)+'</em></a>';
+  });
+  if(prj.length)G.push([s.gPrj,prj]);
+
+  el("res").innerHTML=G.length
+    ? '<div class="res">'+G.map(function(g){
+        return '<div class="res-g"><div class="res-h">'+g[0]+'<u dir="ltr">'+g[1].length+
+          '</u></div>'+g[1].join("")+'</div>';}).join("")+'</div>'+
+      (!CORF?'<div class="loading">'+s.loading+'</div>':"")
+    : '<div class="res"><div class="loading">'+s.noHit+'</div></div>';
+}
+function goCtl(id){
+  sel=id;fnFilter="*";paintExplorer();setHash("c/"+id);
+  el("det").scrollIntoView({block:"center",behavior:"smooth"});
+}
+
+/* ---- Review tool. Decisions stay in memory and leave as a file, because a
+   confirmation with no named reviewer is worth no more than the proposal. ---- */
+const AR_TITLE={};C.controls.forEach(function(c){AR_TITLE[c.id]=c.tAr;});
+const REV={};
+let revWho="",revFilter="strong";
+function setWho(v){revWho=v.trim();paintReview();}
+function setRevFilter(v){revFilter=v;paintReview();}
+function decide(key,verdict){
+  const n=el("note-"+key);
+  REV[key]={verdict:verdict,note:n?n.value.trim():"",by:revWho};
+  paintReview();
+}
+function undo(key){delete REV[key];paintReview();}
+function exportRev(){
+  const rows=Object.keys(REV).map(function(k){
+    const p=XW.p.filter(function(x){return x.n+"|"+x.c===k;})[0];
+    return {nbcc:p.n,corf:p.c,score:p.s,confidence:p.cf,
+      status:REV[k].verdict==="ok"?"confirmed":"rejected",
+      decision:REV[k].verdict==="ok"?"equivalent":"not equivalent",
+      reviewed_by:REV[k].by,note:REV[k].note};
+  });
+  const blob=new Blob([JSON.stringify({reviewed:rows.length,reviewer:revWho,pairs:rows},null,2)],
+    {type:"application/json"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);a.download="crosswalk-review.json";a.click();
+  URL.revokeObjectURL(a.href);
+}
+function paintReview(){
+  const s=t();
+  if(!XW){el("rev-bar").innerHTML='<span class="loading">'+s.loading+'</span>';el("rev").innerHTML="";return;}
+  const done=Object.keys(REV).length;
+  el("rev-bar").innerHTML=
+    '<b dir="ltr">'+done+' / '+XW.p.length+'</b>'+
+    '<input class="who" id="who" value="'+esc(revWho)+'" oninput="setWho(this.value)" placeholder="'+s.who+'">'+
+    ["strong","moderate","weak"].map(function(k){
+      return '<button class="btn'+(revFilter===k?" pri":"")+'" onclick="setRevFilter(\''+k+'\')">'+
+        s.cf[k]+' <span dir="ltr">'+XW.n[k]+'</span></button>';}).join("")+
+    '<button class="btn" onclick="exportRev()"'+(done&&revWho?"":" disabled")+'>'+s.exp+'</button>';
+
+  el("rev").innerHTML=XW.p.filter(function(p){return p.cf===revFilter;}).slice(0,40).map(function(p){
+    const key=p.n+"|"+p.c,r=REV[key];
+    return '<div class="pair'+(r?" done":"")+'">'+
+      '<div class="pair-h"><b dir="ltr">'+esc(p.n)+'</b><i>'+
+      esc(L()?(AR_TITLE[p.n]||p.nt):p.nt)+'</i>'+
+      '<span class="conf '+p.cf+'">'+esc(p.dm||"")+'</span>'+
+      '<s dir="ltr">'+esc(p.c)+' &middot; '+p.s+'</s></div>'+
+      (L()?'<div style="font-size:11px;color:var(--faint);margin-bottom:4px">'+s.srcEn+'</div>':"")+
+      '<p dir="ltr" style="text-align:start">'+esc(p.tx)+'</p>'+
+      (r?'<div class="pair-a"><span class="verdict '+r.verdict+'">'+(r.verdict==="ok"?s.vOk:s.vNo)+'</span>'+
+          (r.note?'<span style="font-size:12.3px;color:var(--faint)">'+esc(r.note)+'</span>':"")+
+          '<button class="btn" onclick="undo(\''+key+'\')">'+s.undo+'</button></div>'
+        :'<div class="pair-a"><input class="note" id="note-'+key+'" placeholder="'+s.why+'">'+
+          '<button class="btn pri" onclick="decide(\''+key+'\',\'ok\')"'+(revWho?"":" disabled")+'>'+s.ok+'</button>'+
+          '<button class="btn" onclick="decide(\''+key+'\',\'no\')"'+(revWho?"":" disabled")+'>'+s.no+'</button></div>')+
+      '</div>';
+  }).join("");
+}
+
+paint();render();readHash();lazy();
 </script>
 </body>
 </html>
