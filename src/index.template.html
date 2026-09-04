@@ -4,378 +4,365 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Markaz | Kuwait Cybersecurity Research Centre</title>
-<meta name="description" content="Control centre for open cybersecurity research, tooling and resources from Kuwait.">
+<meta name="description" content="Open regulatory data for Kuwait and the Gulf, and the tooling built against it.">
 <style>
 :root{
-  --bg:#080b10; --band:#0e131b; --card:#121822; --card-hi:#18202c;
-  --line:#1e2733; --line-hi:#2b3745;
-  --ink:#e8eef5; --ink-dim:#93a1b2; --ink-faint:#5f6d7e;
-  --signal:#2dd4a7; --kuwait:#00a86b; --amber:#f0b429; --slate:#7c8b9c;
-  --latin:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
-  --arabic:"SF Arabic","Segoe UI","Noto Naskh Arabic","Geeza Pro",Tahoma,sans-serif;
+  --bg:#0a0c0e; --sunk:#07090a; --raise:#101417;
+  --rule:#1c2226; --rule-hi:#2a3238;
+  --ink:#e7ebee; --dim:#94a0a9; --faint:#5c6a73;
+  --go:#0fa971; --go-dim:#0c7b53; --amber:#d99b28;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  --ar:"SF Arabic","Segoe UI","Noto Naskh Arabic","Geeza Pro",Tahoma,sans-serif;
   --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{background:var(--bg)}
 body{
-  background:var(--bg); color:var(--ink); font-family:var(--latin);
-  line-height:1.62; letter-spacing:-0.006em;
-  font-variant-numeric:tabular-nums; font-feature-settings:"tnum" 1;
-  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  background:var(--bg);color:var(--ink);font-family:var(--sans);
+  font-size:15px;line-height:1.6;letter-spacing:-0.005em;
+  font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
 }
-html[dir="rtl"] body{
-  font-family:var(--arabic); line-height:1.85; letter-spacing:normal;
-}
-.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+html[dir="rtl"] body{font-family:var(--ar);line-height:1.85;letter-spacing:normal}
+a{color:inherit}
+.w{max-width:1060px;margin:0 auto;padding:0 22px}
 
-/* Masthead */
-.top{border-bottom:1px solid var(--line);background:var(--band)}
-.top-in{display:flex;align-items:center;gap:16px;padding:18px 0;flex-wrap:wrap}
-.mark{
-  width:42px;height:42px;flex:none;border-radius:9px;
-  background:linear-gradient(150deg,var(--kuwait),#046b48);
-  display:grid;place-items:center;font-size:20px;color:#fff;
-  font-family:var(--arabic);
+/* Masthead: one line, no hero. */
+.top{border-bottom:1px solid var(--rule);background:var(--sunk);position:sticky;top:0;z-index:40}
+.top-in{display:flex;align-items:center;gap:13px;padding:13px 0}
+.sigil{
+  width:34px;height:34px;flex:none;border-radius:7px;display:grid;place-items:center;
+  background:var(--go);color:#03150e;font-family:var(--ar);font-size:17px;font-weight:700;
 }
-.brand{flex:1;min-width:180px}
-.brand h1{font-size:19px;font-weight:650;letter-spacing:-0.02em}
-html[dir="rtl"] .brand h1{letter-spacing:normal}
-.brand p{font-size:12.5px;color:var(--ink-dim);margin-top:1px}
-.langbtn{
-  background:var(--card);border:1px solid var(--line-hi);color:var(--ink);
-  padding:8px 15px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:600;
+.nm{flex:1;min-width:0}
+.nm b{display:block;font-size:15.5px;font-weight:640;letter-spacing:-0.015em;line-height:1.25}
+html[dir="rtl"] .nm b{letter-spacing:normal}
+.nm span{display:block;font-size:12px;color:var(--faint);line-height:1.35}
+.lang{
+  background:transparent;border:1px solid var(--rule-hi);color:var(--dim);
+  padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12.5px;font-weight:600;font-family:inherit;
 }
-.langbtn:hover{border-color:var(--signal);color:var(--signal)}
+.lang:hover{border-color:var(--go);color:var(--go)}
 
-/* Hero */
-.hero{padding:52px 0 40px;border-bottom:1px solid var(--line)}
-.hero h2{font-size:31px;font-weight:680;letter-spacing:-0.028em;max-width:22ch;line-height:1.22}
-html[dir="rtl"] .hero h2{letter-spacing:normal;line-height:1.5;max-width:26ch}
-.hero p{color:var(--ink-dim);margin-top:14px;max-width:60ch;font-size:15px}
-
-/* Stat band */
-.band{background:var(--band);border-block:1px solid var(--line)}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
-.stat{padding:20px 18px;background:var(--band)}
-.stat b{display:block;font-size:26px;font-weight:660;color:var(--signal);font-family:var(--mono);letter-spacing:-0.03em}
-.stat span{font-size:11.5px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.09em;margin-top:3px;display:block}
-html[dir="rtl"] .stat span{text-transform:none;letter-spacing:normal;font-size:12.5px}
-
-/* Open data */
-.data{padding:30px 0 4px}
-.data h3{font-size:17.5px;font-weight:650;margin-bottom:4px}
-.data>p{color:var(--ink-faint);font-size:13.5px;margin-bottom:15px;max-width:72ch}
-.dgrid{display:grid;gap:11px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
-.dset{
-  background:linear-gradient(160deg,#101c19,var(--card));
-  border:1px solid #1d3830;border-radius:11px;padding:16px 17px;
+/* Readout: the instrument line. */
+.readout{background:var(--sunk);border-bottom:1px solid var(--rule);overflow:hidden}
+.ro{display:flex;flex-wrap:wrap;font-family:var(--mono);font-size:12px}
+.ro i{
+  font-style:normal;display:inline-flex;align-items:baseline;gap:6px;
+  padding:9px 0;margin-inline-end:26px;color:var(--faint);
+  white-space:nowrap;letter-spacing:.02em;
 }
-.dset h4{font-size:15px;font-weight:650;margin-bottom:5px}
-.dset p{color:var(--ink-dim);font-size:13.4px;line-height:1.58;margin-bottom:11px}
-html[dir="rtl"] .dset p{line-height:1.85}
-.dnum{font-family:var(--mono);color:var(--signal);font-size:22px;font-weight:660;letter-spacing:-0.03em}
-.dlinks{display:flex;gap:7px;flex-wrap:wrap}
-.dlinks a{
-  font-family:var(--mono);font-size:11.5px;color:var(--signal);text-decoration:none;
-  border:1px solid #1d4a3c;padding:3px 9px;border-radius:5px;
-}
-.dlinks a:hover{background:#10332a}
+.ro i b{color:var(--go);font-weight:600}
+html[dir="rtl"] .ro i{font-family:var(--ar);letter-spacing:normal}
 
-/* Controls */
-.controls{padding:26px 0 6px;position:sticky;top:0;background:var(--bg);z-index:20;border-bottom:1px solid var(--line)}
-.search{
-  width:100%;background:var(--card);border:1px solid var(--line-hi);color:var(--ink);
-  padding:11px 15px;border-radius:9px;font-size:14.5px;font-family:inherit;
-}
-.search:focus{outline:none;border-color:var(--signal)}
-.search::placeholder{color:var(--ink-faint)}
-.chips{display:flex;gap:7px;flex-wrap:wrap;margin:13px 0}
-.chip{
-  background:var(--card);border:1px solid var(--line);color:var(--ink-dim);
-  padding:6px 12px;border-radius:99px;cursor:pointer;font-size:12.5px;
-  font-family:inherit;white-space:nowrap;
-}
-.chip:hover{border-color:var(--line-hi);color:var(--ink)}
-.chip.on{background:var(--signal);border-color:var(--signal);color:#04120d;font-weight:640}
-.chip b{font-family:var(--mono);opacity:.62;margin-inline-start:5px;font-weight:500}
+/* Statement: short and factual, no slogan. */
+.lede{padding:30px 0 26px;border-bottom:1px solid var(--rule)}
+.lede p{max-width:66ch;color:var(--dim);font-size:15.5px}
+.lede p+p{margin-top:11px}
 
-/* Sections */
-.sec{padding:34px 0 4px}
-.sec-h{display:flex;align-items:baseline;gap:11px;margin-bottom:5px;flex-wrap:wrap}
-.sec-h h3{font-size:17.5px;font-weight:650;letter-spacing:-0.017em}
-html[dir="rtl"] .sec-h h3{letter-spacing:normal}
-.sec-h em{font-style:normal;font-family:var(--mono);font-size:12px;color:var(--ink-faint)}
-.sec-d{color:var(--ink-faint);font-size:13.5px;margin-bottom:17px;max-width:72ch}
+/* Section head shared by every block. */
+.sh{display:flex;align-items:baseline;gap:10px;padding:26px 0 3px;border-bottom:1px solid var(--rule)}
+.sh h2{font-size:12px;font-weight:660;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+html[dir="rtl"] .sh h2{letter-spacing:normal;text-transform:none;font-size:13.5px}
+.sh em{font-style:normal;font-family:var(--mono);font-size:11.5px;color:var(--faint);margin-inline-start:auto}
+.sh a{font-size:12px;color:var(--go);text-decoration:none;margin-inline-start:auto}
+.sh a:hover{text-decoration:underline}
 
-.grid{display:grid;gap:11px;grid-template-columns:repeat(auto-fill,minmax(292px,1fr))}
-.card{
-  background:var(--card);border:1px solid var(--line);border-radius:11px;
-  padding:15px 16px;display:flex;flex-direction:column;gap:8px;
-  border-inline-start:2px solid var(--line-hi);
-}
-.card:hover{background:var(--card-hi);border-color:var(--line-hi)}
-.card.flagship{border-inline-start-color:var(--signal)}
-.card.active{border-inline-start-color:var(--kuwait)}
-.card.seed{border-inline-start-color:var(--slate)}
-.card-t{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.card-t a{
-  color:var(--ink);text-decoration:none;font-weight:640;font-size:15px;
-  font-family:var(--mono);letter-spacing:-0.02em;
-  overflow-wrap:anywhere; word-break:normal;
-}
-.card-t a:hover{color:var(--signal)}
-.card p{color:var(--ink-dim);font-size:13.4px;line-height:1.58;flex:1}
-html[dir="rtl"] .card p{line-height:1.85;font-size:14px}
-.meta{display:flex;gap:7px;flex-wrap:wrap;align-items:center;font-size:11.5px;color:var(--ink-faint);font-family:var(--mono)}
-.tag{border:1px solid var(--line-hi);padding:2px 7px;border-radius:5px;white-space:nowrap}
-.tag.star{color:var(--amber);border-color:#4a3a10}
-.tag.site{color:var(--signal);border-color:#154034;text-decoration:none}
-html[dir="rtl"] .tag.site,html[dir="rtl"] .tag.nolic{font-family:var(--arabic);letter-spacing:normal}
-.tag.site:hover{background:#0f2b23}
-.tag.nolic{color:#e8927c;border-color:#4a2620}
+/* Records: hairline rows, not cards. */
+.rows{border-bottom:1px solid var(--rule)}
+.row{display:block;padding:14px 0;border-bottom:1px solid var(--rule);text-decoration:none}
+.row:last-child{border-bottom:0}
+.row:hover{background:var(--raise)}
+.r-top{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.r-id{font-family:var(--mono);font-size:14px;font-weight:600;color:var(--ink);
+      letter-spacing:-0.02em;overflow-wrap:anywhere}
+.row:hover .r-id{color:var(--go)}
+.r-ttl{font-weight:620;font-size:14.5px}
+.r-meta{margin-inline-start:auto;display:flex;gap:12px;font-family:var(--mono);
+        font-size:11px;color:var(--faint);white-space:nowrap}
+.r-meta s{text-decoration:none}
+.r-meta .st{color:var(--amber)}
+.r-meta .op{color:var(--go)}
+/* Arabic labels must never inherit the mono stack: it cannot join letters. */
+html[dir="rtl"] .r-meta .op,html[dir="rtl"] .r-meta .nl{font-family:var(--ar);letter-spacing:normal}
+.r-desc{color:var(--dim);font-size:13.5px;line-height:1.55;margin-top:4px;max-width:88ch}
+html[dir="rtl"] .r-desc{line-height:1.8;font-size:14px}
 
-/* Mirrors */
-.mirrors{background:var(--band);border:1px solid var(--line);border-radius:11px;padding:19px;margin:12px 0 0}
-.mirrors h4{font-size:14.5px;font-weight:640;margin-bottom:6px}
-.mirrors p{color:var(--ink-faint);font-size:13px;margin-bottom:13px;max-width:70ch}
-.mlist{display:flex;flex-wrap:wrap;gap:6px}
-.mlist a{
-  font-family:var(--mono);font-size:11.5px;color:var(--ink-dim);text-decoration:none;
-  border:1px solid var(--line);padding:3px 8px;border-radius:5px;
-}
-.mlist a:hover{border-color:var(--line-hi);color:var(--ink)}
+/* Dataset blocks: the centre's product, given weight. */
+.ds{padding:17px 0;border-bottom:1px solid var(--rule);display:grid;
+    grid-template-columns:118px 1fr;gap:20px;align-items:start}
+.ds:last-child{border-bottom:0}
+.ds-n{font-family:var(--mono);font-size:27px;font-weight:660;color:var(--go);
+      letter-spacing:-0.035em;line-height:1.05}
+.ds-u{display:block;font-family:var(--mono);font-size:10.5px;color:var(--faint);
+      margin-top:3px;letter-spacing:.03em}
+html[dir="rtl"] .ds-u{font-family:var(--ar);letter-spacing:normal;font-size:12px}
+.ds h3{font-size:15px;font-weight:640;margin-bottom:4px}
+.ds p{color:var(--dim);font-size:13.5px;line-height:1.58;max-width:76ch}
+html[dir="rtl"] .ds p{line-height:1.82;font-size:14px}
+.ds-f{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;align-items:center}
+.ds-f a{font-family:var(--mono);font-size:11px;color:var(--go);text-decoration:none;
+        border:1px solid var(--go-dim);padding:2px 8px;border-radius:4px}
+.ds-f a:hover{background:#0b2b1f}
+.flag{font-size:11px;color:var(--amber);border:1px solid #5c4415;
+      padding:2px 8px;border-radius:4px;background:#20180a}
+html[dir="rtl"] .flag{font-family:var(--ar)}
 
-.empty{color:var(--ink-faint);padding:30px 0;font-size:14px}
-footer{border-top:1px solid var(--line);margin-top:46px;padding:26px 0 42px;color:var(--ink-faint);font-size:13px}
-footer a{color:var(--ink-dim);text-decoration:none}
-footer a:hover{color:var(--signal)}
-.foot-in{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
-@media(max-width:640px){
-  .hero{padding:26px 0 22px}
-  .hero h2{font-size:23px;max-width:none}
-  html[dir="rtl"] .hero h2{max-width:none}
-  .hero p{font-size:14px;margin-top:10px}
-  .stats{grid-template-columns:repeat(2,1fr)}
-  .stat{padding:14px 14px}
-  .stat b{font-size:22px}
-  .controls{padding:14px 0 0}
-  .search{padding:10px 13px;font-size:14px}
-  .chips{
-    flex-wrap:nowrap;overflow-x:auto;margin:10px -20px;padding:0 20px 10px;
-    scrollbar-width:none;-webkit-overflow-scrolling:touch;
-  }
-  .chips::-webkit-scrollbar{display:none}
-  .chip{flex:none}
-  .sec{padding:24px 0 4px}
-  .grid{grid-template-columns:1fr}
+/* Filter bar. */
+.bar{position:sticky;top:60px;background:var(--bg);z-index:30;padding:12px 0 0;border-bottom:1px solid var(--rule)}
+.q{width:100%;background:var(--raise);border:1px solid var(--rule-hi);color:var(--ink);
+   padding:9px 13px;border-radius:6px;font-size:14px;font-family:inherit}
+.q:focus{outline:none;border-color:var(--go)}
+.q::placeholder{color:var(--faint)}
+.tabs{display:flex;gap:5px;flex-wrap:wrap;margin:10px 0 9px}
+.tab{background:transparent;border:1px solid transparent;color:var(--dim);
+     padding:4px 9px;border-radius:5px;cursor:pointer;font-size:12px;
+     font-family:inherit;white-space:nowrap}
+.tab:hover{color:var(--ink);background:var(--raise)}
+.tab.on{background:var(--go);color:#03150e;font-weight:640}
+.tab u{text-decoration:none;font-family:var(--mono);opacity:.6;margin-inline-start:5px;font-size:11px}
+
+.grp{padding:20px 0 0}
+.grp-h{font-size:12.5px;font-weight:640;color:var(--dim);padding-bottom:7px;
+       border-bottom:1px solid var(--rule-hi);display:flex;gap:9px;align-items:baseline}
+.grp-h em{font-style:normal;font-family:var(--mono);font-size:11px;color:var(--faint);margin-inline-start:auto}
+.grp-d{color:var(--faint);font-size:12.5px;padding:8px 0 2px;max-width:76ch}
+
+.mir{padding:16px 0 4px}
+.mir p{color:var(--faint);font-size:12.5px;max-width:74ch;margin-bottom:11px}
+.mir div{display:flex;flex-wrap:wrap;gap:5px}
+.mir a{font-family:var(--mono);font-size:11px;color:var(--faint);text-decoration:none;
+       border:1px solid var(--rule);padding:2px 7px;border-radius:4px}
+.mir a:hover{color:var(--dim);border-color:var(--rule-hi)}
+
+.none{color:var(--faint);padding:26px 0;font-size:14px}
+footer{border-top:1px solid var(--rule);margin-top:34px;padding:20px 0 40px;
+       color:var(--faint);font-size:12.5px;background:var(--sunk)}
+.fi{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.fi a{color:var(--dim);text-decoration:none}
+.fi a:hover{color:var(--go)}
+
+@media(max-width:680px){
+  .w{padding:0 16px}
+  .top-in{padding:11px 0}
+  .lede{padding:22px 0 20px}
+  .lede p{font-size:14.5px}
+  .ro i{margin-inline-end:18px;font-size:11.5px;padding:8px 0}
+  .bar{top:56px}
+  .tabs{flex-wrap:nowrap;overflow-x:auto;margin:9px -16px;padding:0 16px 9px;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:none}
+  .ds{grid-template-columns:1fr;gap:8px}
+  .ds-n{font-size:23px}
+  .ds-u{display:inline;margin-inline-start:7px}
+  .r-meta{margin-inline-start:0;margin-top:6px;flex-wrap:wrap}
+  .r-top{gap:6px}
 }
 </style>
 </head>
 <body>
 
-<div class="top"><div class="wrap"><div class="top-in">
-  <div class="mark">م</div>
-  <div class="brand"><h1 id="bn"></h1><p id="bt"></p></div>
-  <button class="langbtn" id="lang" onclick="toggle()"></button>
-</div></div></div>
+<header class="top"><div class="w"><div class="top-in">
+  <div class="sigil">م</div>
+  <div class="nm"><b id="nm"></b><span id="tg"></span></div>
+  <button class="lang" id="lang" onclick="toggle()"></button>
+</div></div></header>
 
-<div class="wrap"><div class="hero">
-  <h2 id="hh"></h2>
-  <p id="hp"></p>
-</div></div>
+<div class="readout"><div class="w"><div class="ro" id="ro"></div></div></div>
 
-<div class="band"><div class="wrap"><div class="stats" id="stats"></div></div></div>
+<div class="w">
+  <div class="lede" id="lede"></div>
 
-<div class="wrap">
-  <section class="data" id="data"></section>
-  <div class="controls">
-    <input class="search" id="q" oninput="render()" autocomplete="off">
-    <div class="chips" id="chips"></div>
+  <div class="sh"><h2 id="h-data"></h2><a href="corpus/" id="a-data"></a></div>
+  <div id="data"></div>
+
+  <div class="sh"><h2 id="h-pub"></h2><a href="publications/" id="a-pub"></a></div>
+  <div class="rows" id="pub"></div>
+
+  <div class="sh"><h2 id="h-idx"></h2><em id="e-idx"></em></div>
+  <div class="bar">
+    <input class="q" id="q" oninput="render()" autocomplete="off">
+    <div class="tabs" id="tabs"></div>
   </div>
   <div id="out"></div>
 
-  <div class="mirrors">
-    <h4 id="mh"></h4>
-    <p id="mp"></p>
-    <div class="mlist" id="ml"></div>
-  </div>
+  <div class="sh"><h2 id="h-mir"></h2></div>
+  <div class="mir"><p id="p-mir"></p><div id="mir"></div></div>
 </div>
 
-<footer><div class="wrap"><div class="foot-in">
+<footer><div class="w"><div class="fi">
   <span id="f1"></span>
-  <span><a href="publications/" id="f3"></a> &nbsp;·&nbsp; <a href="https://github.com/SiteQ8/Markaz/blob/main/CHARTER.md" id="f4"></a> &nbsp;·&nbsp; <a href="https://github.com/SiteQ8" id="f2"></a></span>
+  <span><a href="https://github.com/SiteQ8/Markaz/blob/main/CHARTER.md" id="f2"></a>
+  &nbsp;&middot;&nbsp; <a href="https://github.com/SiteQ8" id="f3"></a></span>
 </div></div></footer>
 
 <script>
 const DATA = /*__CATALOG__*/null;
 
+const SETS = [
+  {id:"kw-nbcc", file:"controls", n:44, fmt:["JSON","CSV"],
+   en:"Kuwait National Basic Cybersecurity Controls",
+   ar:"الضوابط الوطنية الأساسية للأمن السيبراني",
+   enD:"The complete baseline of NCSC Decision No. 2 of 2026, bilingual, mapped to NIST CSF 2.0, CIS v8.1 IG1 and ISO 27001:2022. Text quoted from the Annex is held apart from analysis added here, and 28 controls carry an official purpose while 16 do not.",
+   arD:"الأساس الكامل لقرار المركز الوطني رقم ٢ لسنة ٢٠٢٦ بلغتين، مربوطا بالأطر الدولية الثلاثة، ويفصل النص المنقول من الملحق عن التحليل المضاف هنا، إذ يحمل ثمانية وعشرون ضابطا غرضا رسميا بينما لا يحمله ستة عشر."},
+  {id:"kw-corf", file:"controls", n:874, fmt:["JSON","CSV"],
+   en:"CBK Cyber and Operational Resilience Framework",
+   ar:"إطار المرونة السيبرانية والتشغيلية لبنك الكويت المركزي",
+   enD:"Version 1.0 flattened to one row per control across its three baselines, preserving the published domain structure. Two of the 876 official controls are unaccounted for, and that gap is recorded rather than rounded away.",
+   arD:"الإصدار الأول مسطحا بسجل لكل ضابط عبر خطوط الأساس الثلاثة مع حفظ هيكل المجالات كما نشر، وضابطان من أصل ثمانمئة وستة وسبعين غير محسوبين، وهذه الثغرة مسجلة لا مطوية."},
+  {id:"kw-crosswalk", file:"nbcc-corf", n:215, fmt:["JSON"], warn:true,
+   en:"Proposed crosswalk, national baseline to CBK",
+   ar:"ربط مقترح بين الأساس الوطني وإطار البنك المركزي",
+   enD:"No public mapping between the two regimes exists, so an entity under both holds its evidence twice. Candidates come from a method validated at an effect size of 0.881 against mappings a person already made. Eight reach strong confidence and one of those is wrong, which is why nothing here is reviewed.",
+   arD:"لا يوجد ربط منشور بين النظامين لذا تحتفظ الجهة الخاضعة لهما بأدلتها مرتين، والمرشحات ناتجة عن منهج تحقق منه بحجم أثر بلغ ٠٫٨٨١ أمام ربوط أنجزها إنسان، وثمانية منها بلغت الثقة القوية وأحدها خطأ، ولهذا لم يراجع شيء هنا."}
+];
+
+const PUBS = [
+  {no:"0001", dir:"0001-licence-files-never-read", date:"2026-09-04",
+   en:"Licence Files That Are Never Read",
+   ar:"ملفات الرخص التي لا تُقرأ",
+   enD:"A licence file can be present, readable to a person, and treated as absent by every automated consumer. Six causes documented across 109 repositories, 21 of which carried an unreadable licence.",
+   arD:"قد يكون ملف الرخصة حاضرا يقرؤه الإنسان وتعامله كل أداة آلية وكأنه غائب، وقد وثقت ستة أسباب عبر مئة وتسعة مستودعات حمل واحد وعشرون منها رخصة غير مقروءة."},
+  {no:"0002", dir:"0002-validated-regulatory-crosswalk", date:"2026-09-04",
+   en:"A Validated Method for Proposing Regulatory Crosswalks",
+   ar:"منهج مُتحقَّق منه لاقتراح الربط بين الأطر التنظيمية",
+   enD:"Validating a similarity metric against mappings a person already made, then applying it across two Kuwaiti regimes. The finding is that only 8 of 215 candidates reach strong confidence, and one of those is wrong.",
+   arD:"تحقق من مقياس تشابه أمام ربوط أنجزها إنسان ثم تطبيقه عبر نظامين كويتيين، والنتيجة أن ثمانية فقط من مئتين وخمسة عشر مرشحا بلغت الثقة القوية وأحدها خطأ."}
+];
+
 const T = {
   en:{
-    name:"Markaz", tag:"Kuwait Cybersecurity Research Centre",
-    btn:"العربية",
-    h:"A control centre for open cybersecurity research from Kuwait.",
-    p:"Every tool, control mapping and dataset published under this account, catalogued by domain and kept current from source. Built for practitioners, regulators and students working on Kuwait and Gulf cybersecurity.",
-    s:{projects:"Projects",domains:"Domains",with_site:"Live tools",stars:"Stars"},
-    search:"Search projects, languages, topics",
-    all:"All",
-    mh:"Mirrored upstream work",
-    mp:"These repositories are forks and mirrors of work by others, kept for study and reference. They are not original research from this centre and are listed separately so the distinction is never lost.",
-    none:"No projects match that filter.",
-    f1:"Open catalogue. Rebuilt from source, not maintained by hand.",
-    f2:"github.com/SiteQ8",
-    f3:"Publications",
-    f4:"Charter",
-    dataH:"Open data",
-    dataP:"Regulatory corpora published as data rather than locked inside a tool. Each record separates text quoted from the instrument from analysis added by this centre, and a provenance check fails the release if the two are ever confused.",
-    dUnit:"controls",
-    dPairs:"candidate pairs",
-    dWarn:"Unreviewed. Not a compliance mapping.",
-    nolic:"no licence"
+    nm:"Markaz", tg:"Kuwait Cybersecurity Research Centre", btn:"العربية",
+    ro:[["1,133","published records"],["3","open datasets"],["2","research notes"],["107","projects indexed"],["15","domains"]],
+    lede:["Kuwait's cybersecurity instruments exist as gazette documents and as logic buried inside applications. A practitioner cannot query them, a researcher cannot cite them, and nobody can check them.",
+          "Markaz publishes that material as data, produces analysis over it, and states plainly how far each result can be trusted. It holds no official standing, and nothing here discharges a regulatory obligation."],
+    hData:"Open data", aData:"corpus and method",
+    hPub:"Research notes", aPub:"all notes",
+    hIdx:"Project index", hMir:"Mirrored upstream work",
+    q:"Search projects, languages, topics", all:"All",
+    unit:"records", pairs:"candidate pairs",
+    warn:"Unreviewed. Not a compliance mapping.",
+    mir:"Forks and mirrors of work by others, kept for reference. Not research from this centre, and listed apart so the distinction holds.",
+    none:"Nothing matches that filter.",
+    f1:"Open data and open method. Rebuilt from source, not maintained by hand.",
+    f2:"Charter", f3:"github.com/SiteQ8", nolic:"unlicensed", open:"open"
   },
   ar:{
-    name:"مركز", tag:"مركز الكويت لأبحاث الأمن السيبراني",
-    btn:"English",
-    h:"مركز تحكّم لأبحاث الأمن السيبراني المفتوحة من الكويت.",
-    p:"كل أداة وربط ضوابط ومجموعة بيانات نُشرت تحت هذا الحساب، مفهرسةً حسب المجال ومحدَّثةً من المصدر مباشرةً، وقد بُني المركز ليخدم الممارسين والجهات التنظيمية والطلبة العاملين على الأمن السيبراني في الكويت والخليج.",
-    s:{projects:"مشروع",domains:"مجال",with_site:"أداة تعمل",stars:"نجمة"},
-    search:"ابحث في المشاريع واللغات والمواضيع",
-    all:"الكل",
-    mh:"أعمال منسوخة من مصادر خارجية",
-    mp:"هذه المستودعات نسخ من أعمال آخرين احتُفظ بها للدراسة والرجوع، وهي ليست من إنتاج المركز لذا فُصلت هنا كي لا يلتبس الأمر على القارئ.",
-    none:"لا توجد مشاريع تطابق هذا التصفية.",
-    f1:"كتالوج مفتوح يُبنى من المصدر آلياً لا يدوياً.",
-    f2:"github.com/SiteQ8",
-    f3:"الأبحاث",
-    f4:"الميثاق",
-    dataH:"بيانات مفتوحة",
-    dataP:"مدونات تنظيمية تُنشر بوصفها بيانات لا محبوسة داخل أداة، ويفصل كل سجل بين النص المنقول من الأداة التشريعية والتحليل الذي أضافه المركز، ثم يسقط فحص الإسناد الإصدار إذا اختلط الاثنان.",
-    dUnit:"ضابطا",
-    dPairs:"زوجا مرشحا",
-    dWarn:"غير مراجع، وليس ربطا للامتثال.",
-    nolic:"دون رخصة"
+    nm:"مركز", tg:"مركز الكويت لأبحاث الأمن السيبراني", btn:"English",
+    ro:[["١١٣٣","سجلا منشورا"],["٣","مدونات مفتوحة"],["٢","ورقتان بحثيتان"],["١٠٧","مشروعا مفهرسا"],["١٥","مجالا"]],
+    lede:["توجد الأدوات التشريعية الكويتية في وثائق الجريدة الرسمية أو محبوسة داخل منطق التطبيقات، فلا يستطيع الممارس الاستعلام عنها ولا الباحث اقتباسها ولا أحد التحقق منها.",
+          "ينشر مركز تلك المادة بيانات ثم يُنتج تحليلا فوقها ويصرّح بحدود الثقة في كل نتيجة، ولا صفة رسمية له ولا يُسقط شيء مما ينشره التزاما تنظيميا."],
+    hData:"بيانات مفتوحة", aData:"المدونة والمنهج",
+    hPub:"أوراق بحثية", aPub:"كل الأوراق",
+    hIdx:"فهرس المشاريع", hMir:"أعمال منسوخة من مصادر خارجية",
+    q:"ابحث في المشاريع واللغات والمواضيع", all:"الكل",
+    unit:"سجلا", pairs:"زوجا مرشحا",
+    warn:"غير مراجع، وليس ربطا للامتثال.",
+    mir:"نسخ من أعمال آخرين احتُفظ بها للرجوع إليها، وهي ليست بحثا من هذا المركز لذا فُصلت كي يبقى التمييز قائما.",
+    none:"لا شيء يطابق هذه التصفية.",
+    f1:"بيانات مفتوحة ومنهج مفتوح، يُبنى من المصدر آليا لا يدويا.",
+    f2:"الميثاق", f3:"github.com/SiteQ8", nolic:"دون رخصة", open:"افتح"
   }
 };
 
-let lang = "en";
-let domain = "*";
-
-function t(){ return T[lang]; }
+let lang="en", domain="*";
+const t=()=>T[lang];
+const esc=x=>String(x).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const el=id=>document.getElementById(id);
 
 function toggle(){
-  lang = lang === "en" ? "ar" : "en";
-  const h = document.documentElement;
-  h.lang = lang; h.dir = lang === "ar" ? "rtl" : "ltr";
+  lang = lang==="en" ? "ar" : "en";
+  document.documentElement.lang=lang;
+  document.documentElement.dir = lang==="ar" ? "rtl" : "ltr";
   paint(); render();
 }
 
 function paint(){
-  const s = t();
-  document.title = s.name + " | " + s.tag;
-  bn.textContent = s.name; bt.textContent = s.tag;
-  lang_.textContent = s.btn;
-  hh.textContent = s.h; hp.textContent = s.p;
-  q.placeholder = s.search;
-  mh.textContent = s.mh; mp.textContent = s.mp;
-  f1.textContent = s.f1; f2.textContent = s.f2; f3.textContent = s.f3; f4.textContent = s.f4;
+  const s=t(), L=lang==="ar";
+  document.title=s.nm+" | "+s.tg;
+  el("nm").textContent=s.nm; el("tg").textContent=s.tg; el("lang").textContent=s.btn;
 
-  const st = DATA.stats;
-  stats.innerHTML = [
-    [st.projects, s.s.projects],
-    [DATA.domains.length, s.s.domains],
-    [st.with_site, s.s.with_site],
-    [st.stars, s.s.stars]
-  ].map(([v,l]) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`).join("");
+  el("ro").innerHTML=s.ro.map(function(x){return '<i><b dir="ltr">'+x[0]+'</b>'+x[1]+'</i>';}).join("");
+  el("lede").innerHTML=s.lede.map(function(p){return "<p>"+p+"</p>";}).join("");
 
-  const counts = {};
-  DATA.projects.forEach(p => counts[p.domain] = (counts[p.domain]||0)+1);
-  chips.innerHTML =
-    `<button class="chip ${domain==="*"?"on":""}" onclick="pick('*')">${s.all}<b>${st.projects}</b></button>` +
-    DATA.domains.map(d =>
-      `<button class="chip ${domain===d.id?"on":""}" onclick="pick('${d.id}')">${lang==="ar"?d.ar:d.en}<b>${counts[d.id]||0}</b></button>`
-    ).join("");
+  el("h-data").textContent=s.hData; el("a-data").textContent=s.aData;
+  el("h-pub").textContent=s.hPub;   el("a-pub").textContent=s.aPub;
+  el("h-idx").textContent=s.hIdx;   el("h-mir").textContent=s.hMir;
+  el("p-mir").textContent=s.mir;    el("e-idx").textContent=DATA.stats.projects;
+  el("f1").textContent=s.f1; el("f2").textContent=s.f2; el("f3").textContent=s.f3;
+  el("q").placeholder=s.q;
 
-  paintData();
-  ml.innerHTML = DATA.mirrors.map(m =>
-    `<a href="${m.url}" target="_blank" rel="noopener" dir="ltr">${m.name}</a>`).join("");
-}
+  el("data").innerHTML=SETS.map(function(d){
+    return '<div class="ds">'+
+      '<div><span class="ds-n" dir="ltr">'+d.n+'</span>'+
+      '<span class="ds-u">'+(d.warn?s.pairs:s.unit)+'</span></div>'+
+      '<div><h3>'+(L?d.ar:d.en)+'</h3><p>'+(L?d.arD:d.enD)+'</p>'+
+      '<div class="ds-f">'+
+      d.fmt.map(function(f){return '<a href="corpus/'+d.id+'/'+d.file+'.'+f.toLowerCase()+'" dir="ltr">'+f+'</a>';}).join("")+
+      '<a href="https://github.com/SiteQ8/Markaz/tree/main/corpus/'+d.id+'" dir="ltr">docs</a>'+
+      (d.warn?'<span class="flag">'+s.warn+'</span>':"")+
+      '</div></div></div>';
+  }).join("");
 
-const DATASETS = [
-  {id:"kw-nbcc", n:44,
-   en:"Kuwait National Basic Cybersecurity Controls", ar:"الضوابط الوطنية الأساسية للأمن السيبراني",
-   enD:"All 44 controls of the NBCC baseline, bilingual, with mappings to NIST CSF 2.0, CIS v8.1 IG1 and ISO 27001:2022. Twenty eight carry a purpose printed in the Annex, sixteen do not, and the corpus marks which is which.",
-   arD:"ضوابط الأساس الأربعة والأربعون كاملة بلغتين مع ربطها بالأطر الدولية الثلاثة، ويحمل ثمانية وعشرون منها غرضا منشورا في الملحق بينما لا يحمله ستة عشر، والمدونة تميز بينهما."},
-  {id:"kw-corf", n:874,
-   en:"CBK Cyber and Operational Resilience Framework", ar:"إطار المرونة السيبرانية والتشغيلية",
-   enD:"The Central Bank of Kuwait framework flattened to one row per control across its three baselines, preserving the published domain and subdomain structure.",
-   arD:"إطار بنك الكويت المركزي مسطحا بسجل لكل ضابط عبر خطوط الأساس الثلاثة، مع حفظ هيكل المجالات والمجالات الفرعية كما نشر."},
-  {id:"kw-crosswalk", n:215, file:"nbcc-corf", warn:true,
-   en:"Proposed crosswalk, national baseline to CBK", ar:"ربط مقترح بين الأساس الوطني وإطار البنك المركزي",
-   enD:"No public mapping between the two regimes exists, so an entity under both holds its evidence twice. These candidates come from a method validated at an effect size of 0.881 against mappings a person already made. Not one pair has been reviewed, and the build refuses to let the file claim otherwise.",
-   arD:"لا يوجد ربط منشور بين النظامين، لذا تحتفظ الجهة الخاضعة لهما بأدلتها مرتين، وهذه المرشحات ناتجة عن منهج تحقق منه بحجم أثر بلغ ٠٫٨٨١ أمام ربوط أنجزها إنسان، ولم يراجع أي زوج منها بعد ويرفض البناء أن يدعي الملف غير ذلك."}
-];
+  el("pub").innerHTML=PUBS.map(function(p){
+    return '<a class="row" href="publications/'+p.dir+'/" target="_blank" rel="noopener">'+
+      '<div class="r-top"><span class="r-id" dir="ltr">'+p.no+'</span>'+
+      '<span class="r-ttl">'+(L?p.ar:p.en)+'</span>'+
+      '<span class="r-meta"><s dir="ltr">'+p.date+'</s></span></div>'+
+      '<div class="r-desc">'+(L?p.arD:p.enD)+'</div></a>';
+  }).join("");
 
-function paintData(){
-  const s = t(), L = lang === "ar";
-  data.innerHTML =
-    `<h3>${s.dataH}</h3><p>${s.dataP}</p><div class="dgrid">` +
-    DATASETS.map(d => `<article class="dset">
-        <h4>${L ? d.ar : d.en}</h4>
-        <p>${L ? d.arD : d.enD}</p>
-        <div class="dnum" dir="ltr">${d.n} <span style="font-size:12px;color:var(--ink-faint)">${d.warn ? s.dPairs : s.dUnit}</span></div>
-        ${d.warn ? `<div style="font-size:11.5px;color:var(--amber);margin-top:7px">${s.dWarn}</div>` : ""}
-        <div class="dlinks" style="margin-top:10px">
-          <a href="corpus/${d.id}/${d.file || "controls"}.json" dir="ltr">JSON</a>
-          ${d.file ? "" : `<a href="corpus/${d.id}/controls.csv" dir="ltr">CSV</a>`}
-          <a href="https://github.com/SiteQ8/Markaz/tree/main/corpus/${d.id}" dir="ltr">docs</a>
-        </div>
-      </article>`).join("") + `</div>`;
-}
+  const counts={};
+  DATA.projects.forEach(function(p){counts[p.domain]=(counts[p.domain]||0)+1;});
+  el("tabs").innerHTML='<button class="tab '+(domain==="*"?"on":"")+'" onclick="pick(\'*\')">'+
+    s.all+'<u>'+DATA.stats.projects+'</u></button>'+
+    DATA.domains.map(function(d){
+      return '<button class="tab '+(domain===d.id?"on":"")+'" onclick="pick(\''+d.id+'\')">'+
+        (L?d.ar:d.en)+'<u>'+(counts[d.id]||0)+'</u></button>';
+    }).join("");
 
-function pick(d){ domain = d; paint(); render(); }
-
-function esc(x){ return String(x).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
-
-function render(){
-  const s = t();
-  const term = q.value.trim().toLowerCase();
-  const hits = DATA.projects.filter(p => {
-    if (domain !== "*" && p.domain !== domain) return false;
-    if (!term) return true;
-    return (p.name + " " + p.description + " " + p.ar + " " + p.language + " " +
-            p.topics.join(" ")).toLowerCase().includes(term);
-  });
-
-  if (!hits.length){ out.innerHTML = `<p class="empty">${s.none}</p>`; return; }
-
-  const shown = DATA.domains.filter(d => hits.some(p => p.domain === d.id));
-  out.innerHTML = shown.map(d => {
-    const rows = hits.filter(p => p.domain === d.id)
-      .sort((a,b) => b.stars - a.stars || b.size_kb - a.size_kb);
-    return `<section class="sec">
-      <div class="sec-h"><h3>${lang==="ar"?d.ar:d.en}</h3><em>${rows.length}</em></div>
-      <p class="sec-d">${lang==="ar"?d.ar_desc:d.en_desc}</p>
-      <div class="grid">${rows.map(card).join("")}</div>
-    </section>`;
+  el("mir").innerHTML=DATA.mirrors.map(function(m){
+    return '<a href="'+m.url+'" target="_blank" rel="noopener" dir="ltr">'+m.name+'</a>';
   }).join("");
 }
 
-function card(p){
-  const s = t();
-  const desc = lang === "ar" ? (p.ar || "") : (p.description || "");
-  const bits = [];
-  if (p.language) bits.push(`<span class="tag" dir="ltr">${esc(p.language)}</span>`);
-  if (p.stars) bits.push(`<span class="tag star" dir="ltr">${p.stars}</span>`);
-  if (p.license && p.license !== "NOASSERTION") bits.push(`<span class="tag" dir="ltr">${esc(p.license)}</span>`);
-  else bits.push(`<span class="tag nolic">${s.nolic}</span>`);
-  if (p.pages) bits.push(`<a class="tag site" href="${p.pages}" target="_blank" rel="noopener" dir="ltr">${lang==="ar"?"افتح":"open"}</a>`);
-  return `<article class="card ${p.maturity}">
-    <div class="card-t"><a href="${p.url}" target="_blank" rel="noopener" dir="ltr">${esc(p.name)}</a></div>
-    <p>${esc(desc)}</p>
-    <div class="meta">${bits.join("")}</div>
-  </article>`;
+function pick(d){ domain=d; paint(); render(); }
+
+function render(){
+  const s=t(), L=lang==="ar", term=el("q").value.trim().toLowerCase();
+  const hits=DATA.projects.filter(function(p){
+    if(domain!=="*" && p.domain!==domain) return false;
+    if(!term) return true;
+    return (p.name+" "+p.description+" "+p.ar+" "+p.language+" "+p.topics.join(" ")).toLowerCase().indexOf(term)>-1;
+  });
+  if(!hits.length){ el("out").innerHTML='<p class="none">'+s.none+'</p>'; return; }
+
+  el("out").innerHTML=DATA.domains.filter(function(d){
+    return hits.some(function(p){return p.domain===d.id;});
+  }).map(function(d){
+    const rs=hits.filter(function(p){return p.domain===d.id;})
+      .sort(function(a,b){return b.stars-a.stars||b.size_kb-a.size_kb;});
+    return '<section class="grp"><div class="grp-h"><span>'+(L?d.ar:d.en)+
+      '</span><em>'+rs.length+'</em></div>'+
+      '<div class="grp-d">'+(L?d.ar_desc:d.en_desc)+'</div>'+
+      '<div class="rows">'+rs.map(row).join("")+'</div></section>';
+  }).join("");
 }
 
-const lang_ = document.getElementById("lang");
+function row(p){
+  const s=t(), L=lang==="ar", m=[];
+  if(p.language) m.push('<s dir="ltr">'+esc(p.language)+'</s>');
+  if(p.stars) m.push('<s class="st" dir="ltr">'+p.stars+'</s>');
+  m.push((p.license && p.license!=="NOASSERTION")
+    ? '<s dir="ltr">'+esc(p.license)+'</s>'
+    : '<s class="nl">'+s.nolic+'</s>');
+  if(p.pages) m.push('<s class="op">'+s.open+'</s>');
+  return '<a class="row" href="'+(p.pages||p.url)+'" target="_blank" rel="noopener">'+
+    '<div class="r-top"><span class="r-id" dir="ltr">'+esc(p.name)+'</span>'+
+    '<span class="r-meta">'+m.join("")+'</span></div>'+
+    '<div class="r-desc">'+esc(L?(p.ar||""):(p.description||""))+'</div></a>';
+}
+
 paint(); render();
 </script>
 </body>
