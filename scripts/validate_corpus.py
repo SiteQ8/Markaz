@@ -80,6 +80,31 @@ def main():
     print(f"  csf / cis mapped   {sum(1 for c in controls if c['crosswalk']['csf'])}"
           f" / {sum(1 for c in controls if c['crosswalk']['cis'])}")
 
+    # The crosswalk is a proposal, not a mapping. Nothing may claim review that
+    # has no reviewer attached, and the headline status must stay honest about
+    # how much of it a person has actually looked at.
+    xwalk = ROOT / "corpus" / "kw-crosswalk" / "nbcc-corf.json"
+    if xwalk.exists():
+        x = json.loads(xwalk.read_text(encoding="utf-8"))
+        pairs = x["pairs"]
+        reviewed = [p for p in pairs if p["status"] != "proposed"]
+        for p in pairs:
+            if p["status"] != "proposed" and not p.get("reviewed_by"):
+                faults.append(f"crosswalk {p['nbcc']}/{p['corf']}: reviewed status with no reviewer")
+            if p["status"] == "proposed" and p.get("decision"):
+                faults.append(f"crosswalk {p['nbcc']}/{p['corf']}: decision recorded while still proposed")
+        if reviewed and x["status"] == "unreviewed":
+            faults.append("crosswalk claims unreviewed status but contains reviewed pairs")
+        if not reviewed and x["status"] != "unreviewed":
+            faults.append("crosswalk claims a review status it has not earned")
+        if x["counts"]["reviewed"] != len(reviewed):
+            faults.append(f"crosswalk reviewed count says {x['counts']['reviewed']}, actual {len(reviewed)}")
+        d = x["method"]["validation"]["cohens_d"]
+        if d < 0.2:
+            faults.append(f"crosswalk published on a metric with no signal, d={d}")
+        print(f"crosswalk: {len(pairs)} candidate pairs, {len(reviewed)} reviewed, "
+              f"metric d={d}")
+
     if faults:
         print(f"\n{len(faults)} fault(s):", file=sys.stderr)
         for f in faults:
