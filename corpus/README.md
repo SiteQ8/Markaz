@@ -12,6 +12,7 @@ on it, cite it, or check it.
 | [`kw-corf`](kw-corf/) | CBK Cyber and Operational Resilience Framework v1.0 | 874 controls | JSON, CSV |
 | [`kw-crosswalk`](kw-crosswalk/) | Proposed national baseline to CBK mapping, **unreviewed** | 215 candidate pairs | JSON |
 | [`kw-lexicon`](kw-lexicon/) | Bilingual security vocabulary from the baseline's parallel text | 44 attested, 228 derived | JSON, CSV |
+| [`kw-coverage`](kw-coverage/) | What each half of the baseline contributes in framework terms | 50 CSF references analysed | JSON |
 
 ## The provenance rule
 
@@ -46,6 +47,7 @@ file. The method behind it is validated in
 node scripts/build_corpus.mjs /path/to/Kuwait-NBCC
 python3 scripts/build_crosswalk.py
 python3 scripts/build_lexicon.py
+python3 scripts/build_coverage.py
 python3 scripts/validate_corpus.py
 ```
 
