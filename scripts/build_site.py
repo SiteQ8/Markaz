@@ -43,7 +43,13 @@ def main():
         sys.exit(1)
 
     payload = json.dumps(catalog, ensure_ascii=False, separators=(",", ":"))
-    html = TEMPLATE.read_text(encoding="utf-8").replace("/*__CATALOG__*/null", payload)
+    corpus = (ROOT / "data" / "corpus-lite.json").read_text(encoding="utf-8").strip()
+    html = (TEMPLATE.read_text(encoding="utf-8")
+            .replace("/*__CATALOG__*/null", payload)
+            .replace("/*__CORPUS__*/null", corpus))
+    if "__CATALOG__" in html or "__CORPUS__" in html:
+        print("A payload placeholder was not replaced.", file=sys.stderr)
+        sys.exit(1)
     OUT.write_text(html, encoding="utf-8")
 
     size = OUT.stat().st_size
