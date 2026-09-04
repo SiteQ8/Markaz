@@ -9,11 +9,24 @@ A control centre for open cybersecurity research, tooling and resources from Kuw
 
 ## What this is
 
-Markaz is the index over everything published under this account. It is not another
-tool. It is the layer that makes 107 tools, control mappings and datasets findable,
-citable and current.
+Markaz publishes open regulatory data for Kuwait and the Gulf, and indexes the tooling
+built against it.
 
-Three things make it a research centre rather than a profile page:
+The data comes first. Kuwait's cybersecurity instruments exist as PDFs and as logic
+buried inside applications, which means practitioners cannot query them, researchers
+cannot cite them, and nobody can check them. The centre publishes them as versioned
+datasets with the provenance made explicit.
+
+| Dataset | Instrument | Records |
+| --- | --- | --- |
+| [`kw-nbcc`](corpus/kw-nbcc/) | NCSC Decision No. 2 of 2026, national baseline | 44 controls |
+| [`kw-corf`](corpus/kw-corf/) | CBK Cyber and Operational Resilience Framework v1.0 | 874 controls |
+
+Every `kw-nbcc` record separates text quoted from the Annex from analysis added here,
+and the build fails if the two are ever confused. See [the corpus](corpus/) for the
+rule and its known limitations.
+
+Three further things make it a centre rather than a profile page:
 
 **It separates original research from mirrored work.** 107 original projects are
 catalogued. 32 forks and mirrors of other people's work are listed apart, clearly
@@ -81,11 +94,22 @@ each card.
 
 ## ما هذا المركز
 
-مركز هو الفهرس الجامع لكل ما يُنشر تحت هذا الحساب، وهو ليس أداةً جديدةً تُضاف إلى
-الأدوات بل الطبقة التي تجعل مئةً وسبعة مشاريع وربوط ضوابط ومجموعات بيانات قابلةً
-للإيجاد والاقتباس والتحديث.
+ينشر مركز بيانات تنظيمية مفتوحة للكويت والخليج، ثم يفهرس الأدوات المبنية عليها.
 
-ثلاثة أمور تجعله مركز أبحاث لا صفحة تعريف:
+والبيانات تأتي أولاً، لأن الأدوات التشريعية الكويتية موجودة في ملفات مطبوعة أو محبوسة
+داخل منطق التطبيقات، ما يعني أن الممارس لا يستطيع الاستعلام عنها ولا الباحث اقتباسها
+ولا أحد التحقق منها، لذا ينشرها المركز مدوناتٍ مؤرشفةً بإصدارات ويصرّح فيها بمصدر كل
+حقل.
+
+| المدونة | الأداة التشريعية | السجلات |
+| --- | --- | --- |
+| `kw-nbcc` | قرار المركز الوطني رقم ٢ لسنة ٢٠٢٦ | ٤٤ ضابطاً |
+| `kw-corf` | إطار المرونة السيبرانية والتشغيلية لبنك الكويت المركزي | ٨٧٤ ضابطاً |
+
+يفصل كل سجل في المدونة الأولى بين النص المنقول من الملحق والتحليل المضاف هنا، ثم يسقط
+البناء إذا اختلط الاثنان.
+
+وثلاثة أمور أخرى تجعله مركزاً لا صفحة تعريف:
 
 **يفصل العمل الأصيل عن المنسوخ،** فقد فُهرس مئة وسبعة مشاريع أصيلة بينما وُضعت اثنان
 وثلاثون نسخةً من أعمال آخرين في قسم منفصل موسوم بوضوح كي لا يختلط النسب على أحد.
