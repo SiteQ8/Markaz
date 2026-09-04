@@ -55,9 +55,8 @@ html[dir="rtl"] .hero h2{letter-spacing:normal;line-height:1.5;max-width:26ch}
 
 /* Stat band */
 .band{background:var(--band);border-block:1px solid var(--line)}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr))}
-.stat{padding:20px 18px;border-inline-end:1px solid var(--line)}
-.stat:last-child{border-inline-end:0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
+.stat{padding:20px 18px;background:var(--band)}
 .stat b{display:block;font-size:26px;font-weight:660;color:var(--signal);font-family:var(--mono);letter-spacing:-0.03em}
 .stat span{font-size:11.5px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.09em;margin-top:3px;display:block}
 html[dir="rtl"] .stat span{text-transform:none;letter-spacing:normal;font-size:12.5px}
@@ -131,9 +130,23 @@ footer{border-top:1px solid var(--line);margin-top:46px;padding:26px 0 42px;colo
 footer a{color:var(--ink-dim);text-decoration:none}
 footer a:hover{color:var(--signal)}
 .foot-in{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
-@media(max-width:560px){
-  .hero{padding:36px 0 30px}
-  .hero h2{font-size:25px}
+@media(max-width:640px){
+  .hero{padding:26px 0 22px}
+  .hero h2{font-size:23px;max-width:none}
+  html[dir="rtl"] .hero h2{max-width:none}
+  .hero p{font-size:14px;margin-top:10px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat{padding:14px 14px}
+  .stat b{font-size:22px}
+  .controls{padding:14px 0 0}
+  .search{padding:10px 13px;font-size:14px}
+  .chips{
+    flex-wrap:nowrap;overflow-x:auto;margin:10px -20px;padding:0 20px 10px;
+    scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  }
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex:none}
+  .sec{padding:24px 0 4px}
   .grid{grid-template-columns:1fr}
 }
 </style>
@@ -181,7 +194,7 @@ const T = {
     btn:"العربية",
     h:"A control centre for open cybersecurity research from Kuwait.",
     p:"Every tool, control mapping and dataset published under this account, catalogued by domain and kept current from source. Built for practitioners, regulators and students working on Kuwait and Gulf cybersecurity.",
-    s:{projects:"Projects",domains:"Domains",flagship:"Flagship",with_site:"Live tools",stars:"Stars"},
+    s:{projects:"Projects",domains:"Domains",with_site:"Live tools",stars:"Stars"},
     search:"Search projects, languages, topics",
     all:"All",
     mh:"Mirrored upstream work",
@@ -197,7 +210,7 @@ const T = {
     btn:"English",
     h:"مركز تحكّم لأبحاث الأمن السيبراني المفتوحة من الكويت.",
     p:"كل أداة وربط ضوابط ومجموعة بيانات نُشرت تحت هذا الحساب، مفهرسةً حسب المجال ومحدَّثةً من المصدر مباشرةً، وقد بُني المركز ليخدم الممارسين والجهات التنظيمية والطلبة العاملين على الأمن السيبراني في الكويت والخليج.",
-    s:{projects:"مشروع",domains:"مجال",flagship:"مشروع رئيسي",with_site:"أداة تعمل",stars:"نجمة"},
+    s:{projects:"مشروع",domains:"مجال",with_site:"أداة تعمل",stars:"نجمة"},
     search:"ابحث في المشاريع واللغات والمواضيع",
     all:"الكل",
     mh:"أعمال منسوخة من مصادر خارجية",
@@ -236,7 +249,6 @@ function paint(){
   stats.innerHTML = [
     [st.projects, s.s.projects],
     [DATA.domains.length, s.s.domains],
-    [st.flagship, s.s.flagship],
     [st.with_site, s.s.with_site],
     [st.stars, s.s.stars]
   ].map(([v,l]) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`).join("");
