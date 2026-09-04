@@ -1,0 +1,51 @@
+name: Refresh catalogue
+
+on:
+  schedule:
+    - cron: "0 4 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild catalogue from the GitHub API
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/build_catalog.py
+
+      - name: Rebuild the page
+        run: python3 scripts/build_site.py
+
+      - name: Verify no Unicode dashes survived
+        run: |
+          python3 - <<'PY'
+          import pathlib, sys
+          bad = []
+          for f in ["index.html", "data/catalog.json", "data/descriptions.ar.json", "data/descriptions.en.json"]:
+              text = pathlib.Path(f).read_text(encoding="utf-8")
+              found = [c for c in text if 0x2012 <= ord(c) <= 0x2015]
+              if found:
+                  bad.append(f"{f}: {len(found)}")
+          if bad:
+              print("Unicode dashes found:", *bad, sep="\n  ")
+              sys.exit(1)
+          print("No Unicode dashes.")
+          PY
+
+      - name: Commit if the catalogue changed
+        run: |
+          git config user.name "SiteQ8"
+          git config user.email "311682+SiteQ8@users.noreply.github.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add -A
+            git commit -m "Refresh the catalogue from the live GitHub API."
+            git push
+          else
+            echo "Catalogue already current."
+          fi
