@@ -118,7 +118,7 @@
       "size_kb": 22,
       "url": "https://github.com/SiteQ8/0xPlant",
       "pages": "https://siteq8.github.io/0xPlant/",
-      "license": "NOASSERTION",
+      "license": "MIT",
       "topics": [
         "asset-management",
         "change-tracking",
@@ -141,7 +141,7 @@
         "scada",
         "vulnerability-management"
       ],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -153,13 +153,13 @@
       "size_kb": 21,
       "url": "https://github.com/SiteQ8/alenezi-tool",
       "pages": "",
-      "license": "",
+      "license": "MIT",
       "topics": [
         "ctf",
         "ctf-tools",
         "cybersecurity"
       ],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -171,7 +171,7 @@
       "size_kb": 40,
       "url": "https://github.com/SiteQ8/APIShield",
       "pages": "https://siteq8.github.io/APIShield/",
-      "license": "NOASSERTION",
+      "license": "MIT",
       "topics": [
         "api-security",
         "appsec",
@@ -194,7 +194,7 @@
         "ssrf",
         "vulnerability-scanner"
       ],
-      "updated": "2026-03-09",
+      "updated": "2026-09-04",
       "maturity": "active"
     },
     {
@@ -241,7 +241,7 @@
       "size_kb": 18,
       "url": "https://github.com/SiteQ8/ArabWatch",
       "pages": "https://siteq8.github.io/ArabWatch/",
-      "license": "",
+      "license": "MIT",
       "topics": [
         "arabic",
         "arabic-tv",
@@ -261,7 +261,7 @@
         "worldmonitor",
         "youtube"
       ],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -344,7 +344,7 @@
       "size_kb": 45,
       "url": "https://github.com/SiteQ8/cbk-corf-toolkit",
       "pages": "https://siteq8.github.io/cbk-corf-toolkit/",
-      "license": "NOASSERTION",
+      "license": "MIT",
       "topics": [
         "cbk",
         "corf",
@@ -352,7 +352,7 @@
         "information-security",
         "kuwait"
       ],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "active"
     },
     {
@@ -364,7 +364,7 @@
       "size_kb": 95,
       "url": "https://github.com/SiteQ8/CIS-Audit-Tool",
       "pages": "https://siteq8.github.io/CIS-Audit-Tool/",
-      "license": "",
+      "license": "MIT",
       "topics": [
         "cybersecurity",
         "cybersecurity-education",
@@ -374,7 +374,7 @@
         "infosec",
         "security-tools"
       ],
-      "updated": "2025-11-10",
+      "updated": "2026-09-04",
       "maturity": "active"
     },
     {
@@ -408,14 +408,14 @@
       "size_kb": 44,
       "url": "https://github.com/SiteQ8/cis-controls-platform",
       "pages": "https://siteq8.github.io/cis-controls-platform/",
-      "license": "NOASSERTION",
+      "license": "MIT",
       "topics": [
         "cis",
         "cis-controls",
         "cybersecurity",
         "kuwait"
       ],
-      "updated": "2026-03-03",
+      "updated": "2026-09-04",
       "maturity": "active"
     },
     {
@@ -427,7 +427,7 @@
       "size_kb": 57,
       "url": "https://github.com/SiteQ8/cis-controls-tool",
       "pages": "https://siteq8.github.io/cis-controls-tool/",
-      "license": "NOASSERTION",
+      "license": "MIT",
       "topics": [
         "cybersecurity",
         "cybersecurity-tools",
@@ -436,7 +436,7 @@
         "information-security",
         "informationsecurity"
       ],
-      "updated": "2025-11-17",
+      "updated": "2026-09-04",
       "maturity": "active"
     },
     {
@@ -448,7 +448,7 @@
       "size_kb": 46,
       "url": "https://github.com/SiteQ8/cis-edu-tool",
       "pages": "https://siteq8.github.io/cis-edu-tool/",
-      "license": "",
+      "license": "MIT",
       "topics": [
         "cis",
         "cyber-security",
@@ -459,7 +459,7 @@
         "information-security",
         "infosec"
       ],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "active"
     },
     {
@@ -573,9 +573,9 @@
       "size_kb": 19,
       "url": "https://github.com/SiteQ8/CloudMCP-Arsenal",
       "pages": "https://siteq8.github.io/CloudMCP-Arsenal/",
-      "license": "",
+      "license": "MIT",
       "topics": [],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -687,7 +687,7 @@
       "size_kb": 86,
       "url": "https://github.com/SiteQ8/ctf-notes",
       "pages": "https://siteq8.github.io/ctf-notes/",
-      "license": "NOASSERTION",
+      "license": "MIT",
       "topics": [
         "blueteam",
         "blueteam-tools",
@@ -700,7 +700,7 @@
         "redteam-tools",
         "redteaming"
       ],
-      "updated": "2025-10-26",
+      "updated": "2026-09-04",
       "maturity": "active"
     },
     {
@@ -712,9 +712,9 @@
       "size_kb": 39,
       "url": "https://github.com/SiteQ8/cvedb-api-dashboard",
       "pages": "https://siteq8.github.io/cvedb-api-dashboard/",
-      "license": "",
+      "license": "MIT",
       "topics": [],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -726,9 +726,9 @@
       "size_kb": 24,
       "url": "https://github.com/SiteQ8/CyberArsenal",
       "pages": "https://siteq8.github.io/CyberArsenal/",
-      "license": "",
+      "license": "MIT",
       "topics": [],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -740,7 +740,7 @@
       "size_kb": 93,
       "url": "https://github.com/SiteQ8/CyberPolicy-KW",
       "pages": "https://siteq8.github.io/CyberPolicy-KW/",
-      "license": "NOASSERTION",
+      "license": "MIT",
       "topics": [
         "access-control",
         "arabic",
@@ -763,7 +763,7 @@
         "procedures",
         "risk-management"
       ],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "active"
     },
     {
@@ -775,13 +775,13 @@
       "size_kb": 45,
       "url": "https://github.com/SiteQ8/cyberstrategy-workbench",
       "pages": "https://siteq8.github.io/cyberstrategy-workbench/",
-      "license": "",
+      "license": "MIT",
       "topics": [
         "cybersecurity",
         "leaders",
         "strategy"
       ],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "active"
     },
     {
@@ -793,7 +793,7 @@
       "size_kb": 46,
       "url": "https://github.com/SiteQ8/daily-ayah",
       "pages": "https://siteq8.github.io/daily-ayah/",
-      "license": "NOASSERTION",
+      "license": "MIT",
       "topics": [
         "arabic",
         "ayah",
@@ -816,7 +816,7 @@
         "surah",
         "uthmani"
       ],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "active"
     },
     {
@@ -858,9 +858,9 @@
       "size_kb": 18,
       "url": "https://github.com/SiteQ8/domain-squatting",
       "pages": "https://siteq8.github.io/domain-squatting/",
-      "license": "",
+      "license": "MIT",
       "topics": [],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -872,7 +872,7 @@
       "size_kb": 49,
       "url": "https://github.com/SiteQ8/duaarepo",
       "pages": "https://siteq8.github.io/duaarepo/",
-      "license": "NOASSERTION",
+      "license": "MIT",
       "topics": [
         "adhkar",
         "arabic",
@@ -895,7 +895,7 @@
         "sunnah",
         "supplication"
       ],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "active"
     },
     {
@@ -923,7 +923,7 @@
       "size_kb": 279,
       "url": "https://github.com/SiteQ8/field-manual",
       "pages": "https://siteq8.github.io/field-manual/",
-      "license": "NOASSERTION",
+      "license": "MIT",
       "topics": [
         "blueteam",
         "blueteaming",
@@ -935,7 +935,7 @@
         "redteaming",
         "redteaming-tools"
       ],
-      "updated": "2026-03-06",
+      "updated": "2026-09-04",
       "maturity": "active"
     },
     {
@@ -976,7 +976,7 @@
       "size_kb": 31,
       "url": "https://github.com/SiteQ8/HardHat",
       "pages": "https://siteq8.github.io/HardHat/",
-      "license": "NOASSERTION",
+      "license": "MIT",
       "topics": [
         "audit",
         "bash",
@@ -999,7 +999,7 @@
         "ssh",
         "sysadmin"
       ],
-      "updated": "2026-03-09",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -1035,7 +1035,7 @@
       "size_kb": 12,
       "url": "https://github.com/SiteQ8/Hawqala",
       "pages": "https://siteq8.github.io/Hawqala/",
-      "license": "NOASSERTION",
+      "license": "MIT",
       "topics": [
         "adhkar",
         "arabic",
@@ -1058,7 +1058,7 @@
         "sunnah",
         "tasbeeh"
       ],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -1137,9 +1137,9 @@
       "size_kb": 0,
       "url": "https://github.com/SiteQ8/InfoSecPython",
       "pages": "",
-      "license": "",
+      "license": "MIT",
       "topics": [],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -1170,9 +1170,9 @@
       "size_kb": 18,
       "url": "https://github.com/SiteQ8/KaliMCP",
       "pages": "https://siteq8.github.io/KaliMCP/",
-      "license": "",
+      "license": "MIT",
       "topics": [],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -1209,9 +1209,9 @@
       "size_kb": 37,
       "url": "https://github.com/SiteQ8/kuwait-financial-frameworks",
       "pages": "",
-      "license": "",
+      "license": "MIT",
       "topics": [],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -1250,7 +1250,7 @@
       "size_kb": 48,
       "url": "https://github.com/SiteQ8/KW-OS",
       "pages": "https://siteq8.github.io/KW-OS/",
-      "license": "NOASSERTION",
+      "license": "MIT",
       "topics": [
         "arabic",
         "awesome-list",
@@ -1273,7 +1273,7 @@
         "quran",
         "security-tools"
       ],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "active"
     },
     {
@@ -1320,9 +1320,9 @@
       "size_kb": 26,
       "url": "https://github.com/SiteQ8/KWTWatch",
       "pages": "https://siteq8.github.io/KWTWatch/",
-      "license": "",
+      "license": "MIT",
       "topics": [],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -1382,9 +1382,9 @@
       "size_kb": 95,
       "url": "https://github.com/SiteQ8/LLM-DFIR",
       "pages": "https://siteq8.github.io/LLM-DFIR/",
-      "license": "",
+      "license": "MIT",
       "topics": [],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "active"
     },
     {
@@ -1396,7 +1396,7 @@
       "size_kb": 194,
       "url": "https://github.com/SiteQ8/M365-Defender-Hunting",
       "pages": "",
-      "license": "",
+      "license": "MIT",
       "topics": [
         "banking",
         "cybersecurity",
@@ -1405,7 +1405,7 @@
         "mena",
         "microsoft"
       ],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "active"
     },
     {
@@ -1417,9 +1417,9 @@
       "size_kb": 82,
       "url": "https://github.com/SiteQ8/M365-Defender-Kuwait-Hunting",
       "pages": "",
-      "license": "",
+      "license": "MIT",
       "topics": [],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "active"
     },
     {
@@ -1431,7 +1431,7 @@
       "size_kb": 33,
       "url": "https://github.com/SiteQ8/M365-PCI-Kuwait-Scanner",
       "pages": "",
-      "license": "",
+      "license": "MIT",
       "topics": [
         "cbk",
         "cybersecurity",
@@ -1440,7 +1440,7 @@
         "pci-dss",
         "pci-scoped"
       ],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -1474,7 +1474,7 @@
       "size_kb": 312,
       "url": "https://github.com/SiteQ8/MAI",
       "pages": "https://siteq8.github.io/MAI/",
-      "license": "",
+      "license": "MIT",
       "topics": [
         "arabic",
         "bilingual",
@@ -1488,7 +1488,7 @@
         "rewards",
         "water"
       ],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "active"
     },
     {
@@ -1557,9 +1557,9 @@
       "size_kb": 16,
       "url": "https://github.com/SiteQ8/MCP-CTF-Demo",
       "pages": "https://siteq8.github.io/MCP-CTF-Demo/",
-      "license": "",
+      "license": "MIT",
       "topics": [],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -1705,9 +1705,9 @@
       "size_kb": 32,
       "url": "https://github.com/SiteQ8/NetMap",
       "pages": "https://siteq8.github.io/NetMap/",
-      "license": "",
+      "license": "MIT",
       "topics": [],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -1719,7 +1719,7 @@
       "size_kb": 667,
       "url": "https://github.com/SiteQ8/NewKuwaitCity-SmartSecure",
       "pages": "https://siteq8.github.io/NewKuwaitCity-SmartSecure/",
-      "license": "NOASSERTION",
+      "license": "MIT",
       "topics": [
         "arabic",
         "bilingual",
@@ -1746,9 +1746,9 @@
       "size_kb": 0,
       "url": "https://github.com/SiteQ8/nmap",
       "pages": "",
-      "license": "",
+      "license": "MIT",
       "topics": [],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -1760,7 +1760,7 @@
       "size_kb": 61,
       "url": "https://github.com/SiteQ8/OpenICS-Atlas",
       "pages": "https://siteq8.github.io/OpenICS-Atlas/",
-      "license": "NOASSERTION",
+      "license": "Apache-2.0",
       "topics": [
         "bacnet",
         "chartjs",
@@ -1783,7 +1783,7 @@
         "security-tools",
         "shodan"
       ],
-      "updated": "2026-03-09",
+      "updated": "2026-09-04",
       "maturity": "active"
     },
     {
@@ -1830,9 +1830,9 @@
       "size_kb": 21,
       "url": "https://github.com/SiteQ8/osint",
       "pages": "https://siteq8.github.io/osint/",
-      "license": "",
+      "license": "MIT",
       "topics": [],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -1844,9 +1844,9 @@
       "size_kb": 1,
       "url": "https://github.com/SiteQ8/OSINT-Tools",
       "pages": "",
-      "license": "",
+      "license": "MIT",
       "topics": [],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -1897,12 +1897,12 @@
       "size_kb": 3,
       "url": "https://github.com/SiteQ8/passwordcracking",
       "pages": "",
-      "license": "",
+      "license": "MIT",
       "topics": [
         "hydra",
         "john-the-ripper"
       ],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -1914,12 +1914,12 @@
       "size_kb": 1667,
       "url": "https://github.com/SiteQ8/PhishBOT",
       "pages": "https://siteq8.github.io/PhishBOT/",
-      "license": "",
+      "license": "MIT",
       "topics": [
         "bot",
         "phising"
       ],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "flagship"
     },
     {
@@ -1945,9 +1945,9 @@
       "size_kb": 48,
       "url": "https://github.com/SiteQ8/phishing",
       "pages": "https://siteq8.github.io/phishing/",
-      "license": "",
+      "license": "MIT",
       "topics": [],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -1978,9 +1978,9 @@
       "size_kb": 0,
       "url": "https://github.com/SiteQ8/powershell",
       "pages": "",
-      "license": "",
+      "license": "MIT",
       "topics": [],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -1992,7 +1992,7 @@
       "size_kb": 40,
       "url": "https://github.com/SiteQ8/PowerShield",
       "pages": "https://siteq8.github.io/PowerShield/",
-      "license": "NOASSERTION",
+      "license": "MIT",
       "topics": [
         "active-directory",
         "audit",
@@ -2015,7 +2015,7 @@
         "windows",
         "windows-server"
       ],
-      "updated": "2026-03-09",
+      "updated": "2026-09-04",
       "maturity": "active"
     },
     {
@@ -2027,7 +2027,7 @@
       "size_kb": 122,
       "url": "https://github.com/SiteQ8/PublicEye",
       "pages": "https://siteq8.github.io/PublicEye/",
-      "license": "NOASSERTION",
+      "license": "MIT",
       "topics": [
         "certstream",
         "cryptocurrency",
@@ -2050,7 +2050,7 @@
         "threat-intelligence",
         "whois"
       ],
-      "updated": "2026-03-23",
+      "updated": "2026-09-04",
       "maturity": "active"
     },
     {
@@ -2062,9 +2062,9 @@
       "size_kb": 2,
       "url": "https://github.com/SiteQ8/python_network",
       "pages": "",
-      "license": "",
+      "license": "MIT",
       "topics": [],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -2076,9 +2076,9 @@
       "size_kb": 2,
       "url": "https://github.com/SiteQ8/pythonpentools",
       "pages": "",
-      "license": "",
+      "license": "MIT",
       "topics": [],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -2121,7 +2121,7 @@
       "size_kb": 79,
       "url": "https://github.com/SiteQ8/S7aba",
       "pages": "https://siteq8.github.io/S7aba/",
-      "license": "NOASSERTION",
+      "license": "MIT",
       "topics": [
         "aws-security",
         "azure-security",
@@ -2144,7 +2144,7 @@
         "red-team",
         "security-tools"
       ],
-      "updated": "2026-03-09",
+      "updated": "2026-09-04",
       "maturity": "active"
     },
     {
@@ -2191,9 +2191,9 @@
       "size_kb": 46,
       "url": "https://github.com/SiteQ8/SecAudit",
       "pages": "",
-      "license": "",
+      "license": "MIT",
       "topics": [],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "active"
     },
     {
@@ -2238,9 +2238,9 @@
       "size_kb": 4,
       "url": "https://github.com/SiteQ8/secure-architecture-blueprints",
       "pages": "",
-      "license": "",
+      "license": "MIT",
       "topics": [],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -2284,7 +2284,7 @@
       "size_kb": 36,
       "url": "https://github.com/SiteQ8/security-leadership-panel",
       "pages": "https://siteq8.github.io/security-leadership-panel/",
-      "license": "NOASSERTION",
+      "license": "MIT",
       "topics": [
         "board-reporting",
         "chartjs",
@@ -2307,7 +2307,7 @@
         "vendor-risk",
         "zero-trust"
       ],
-      "updated": "2026-03-08",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -2319,7 +2319,7 @@
       "size_kb": 25,
       "url": "https://github.com/SiteQ8/ShadowPulse",
       "pages": "https://siteq8.github.io/ShadowPulse/",
-      "license": "NOASSERTION",
+      "license": "MIT",
       "topics": [
         "bash",
         "blue-team",
@@ -2342,7 +2342,7 @@
         "threat-hunting",
         "webshell"
       ],
-      "updated": "2026-03-09",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -2354,9 +2354,9 @@
       "size_kb": 36,
       "url": "https://github.com/SiteQ8/SiteQ8-CyberToolkit",
       "pages": "",
-      "license": "NOASSERTION",
+      "license": "MIT",
       "topics": [],
-      "updated": "2026-03-04",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -2368,9 +2368,9 @@
       "size_kb": 11,
       "url": "https://github.com/SiteQ8/soc-tools",
       "pages": "https://siteq8.github.io/soc-tools/",
-      "license": "",
+      "license": "MIT",
       "topics": [],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -2382,9 +2382,9 @@
       "size_kb": 23,
       "url": "https://github.com/SiteQ8/sp",
       "pages": "https://siteq8.github.io/sp/",
-      "license": "",
+      "license": "MIT",
       "topics": [],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "seed"
     },
     {
@@ -2499,7 +2499,7 @@
       "size_kb": 117,
       "url": "https://github.com/SiteQ8/Wain",
       "pages": "https://siteq8.github.io/Wain/",
-      "license": "",
+      "license": "MIT",
       "topics": [
         "activities",
         "arabic",
@@ -2517,7 +2517,7 @@
         "startup",
         "summer-camp"
       ],
-      "updated": "2026-09-03",
+      "updated": "2026-09-04",
       "maturity": "active"
     }
   ],
@@ -2687,7 +2687,7 @@
     "projects": 107,
     "mirrors": 32,
     "stars": 59,
-    "licensed": 52,
+    "licensed": 107,
     "with_site": 80,
     "flagship": 21
   }

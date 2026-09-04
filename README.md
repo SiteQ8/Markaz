@@ -67,7 +67,7 @@ Research notes live in `publications/`, numbered and dated. See the
 
 ## Licence
 
-Apache 2.0. Individual projects in the catalogue carry their own licences, shown on
+MIT. Individual projects in the catalogue carry their own licences, shown on
 each card.
 
 ---
@@ -116,4 +116,4 @@ python3 scripts/build_site.py
 
 ## الرخصة
 
-أباتشي ٢٫٠، أما المشاريع المفهرسة فلكل منها رخصته الخاصة المعروضة على بطاقته.
+رخصة إم آي تي، أما المشاريع المفهرسة فلكل منها رخصته الخاصة المعروضة على بطاقته.
