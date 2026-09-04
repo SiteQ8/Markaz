@@ -203,7 +203,7 @@ footer a:hover{color:var(--signal)}
 
 <footer><div class="wrap"><div class="foot-in">
   <span id="f1"></span>
-  <span><a href="publications/" id="f3"></a> &nbsp;·&nbsp; <a href="https://github.com/SiteQ8" id="f2"></a></span>
+  <span><a href="publications/" id="f3"></a> &nbsp;·&nbsp; <a href="https://github.com/SiteQ8/Markaz/blob/main/CHARTER.md" id="f4"></a> &nbsp;·&nbsp; <a href="https://github.com/SiteQ8" id="f2"></a></span>
 </div></div></footer>
 
 <script>
@@ -224,9 +224,12 @@ const T = {
     f1:"Open catalogue. Rebuilt from source, not maintained by hand.",
     f2:"github.com/SiteQ8",
     f3:"Publications",
+    f4:"Charter",
     dataH:"Open data",
     dataP:"Regulatory corpora published as data rather than locked inside a tool. Each record separates text quoted from the instrument from analysis added by this centre, and a provenance check fails the release if the two are ever confused.",
     dUnit:"controls",
+    dPairs:"candidate pairs",
+    dWarn:"Unreviewed. Not a compliance mapping.",
     nolic:"no licence"
   },
   ar:{
@@ -243,9 +246,12 @@ const T = {
     f1:"كتالوج مفتوح يُبنى من المصدر آلياً لا يدوياً.",
     f2:"github.com/SiteQ8",
     f3:"الأبحاث",
+    f4:"الميثاق",
     dataH:"بيانات مفتوحة",
     dataP:"مدونات تنظيمية تُنشر بوصفها بيانات لا محبوسة داخل أداة، ويفصل كل سجل بين النص المنقول من الأداة التشريعية والتحليل الذي أضافه المركز، ثم يسقط فحص الإسناد الإصدار إذا اختلط الاثنان.",
     dUnit:"ضابطا",
+    dPairs:"زوجا مرشحا",
+    dWarn:"غير مراجع، وليس ربطا للامتثال.",
     nolic:"دون رخصة"
   }
 };
@@ -270,7 +276,7 @@ function paint(){
   hh.textContent = s.h; hp.textContent = s.p;
   q.placeholder = s.search;
   mh.textContent = s.mh; mp.textContent = s.mp;
-  f1.textContent = s.f1; f2.textContent = s.f2; f3.textContent = s.f3;
+  f1.textContent = s.f1; f2.textContent = s.f2; f3.textContent = s.f3; f4.textContent = s.f4;
 
   const st = DATA.stats;
   stats.innerHTML = [
@@ -301,7 +307,11 @@ const DATASETS = [
   {id:"kw-corf", n:874,
    en:"CBK Cyber and Operational Resilience Framework", ar:"إطار المرونة السيبرانية والتشغيلية",
    enD:"The Central Bank of Kuwait framework flattened to one row per control across its three baselines, preserving the published domain and subdomain structure.",
-   arD:"إطار بنك الكويت المركزي مسطحا بسجل لكل ضابط عبر خطوط الأساس الثلاثة، مع حفظ هيكل المجالات والمجالات الفرعية كما نشر."}
+   arD:"إطار بنك الكويت المركزي مسطحا بسجل لكل ضابط عبر خطوط الأساس الثلاثة، مع حفظ هيكل المجالات والمجالات الفرعية كما نشر."},
+  {id:"kw-crosswalk", n:215, file:"nbcc-corf", warn:true,
+   en:"Proposed crosswalk, national baseline to CBK", ar:"ربط مقترح بين الأساس الوطني وإطار البنك المركزي",
+   enD:"No public mapping between the two regimes exists, so an entity under both holds its evidence twice. These candidates come from a method validated at an effect size of 0.881 against mappings a person already made. Not one pair has been reviewed, and the build refuses to let the file claim otherwise.",
+   arD:"لا يوجد ربط منشور بين النظامين، لذا تحتفظ الجهة الخاضعة لهما بأدلتها مرتين، وهذه المرشحات ناتجة عن منهج تحقق منه بحجم أثر بلغ ٠٫٨٨١ أمام ربوط أنجزها إنسان، ولم يراجع أي زوج منها بعد ويرفض البناء أن يدعي الملف غير ذلك."}
 ];
 
 function paintData(){
@@ -311,10 +321,11 @@ function paintData(){
     DATASETS.map(d => `<article class="dset">
         <h4>${L ? d.ar : d.en}</h4>
         <p>${L ? d.arD : d.enD}</p>
-        <div class="dnum" dir="ltr">${d.n} <span style="font-size:12px;color:var(--ink-faint)">${s.dUnit}</span></div>
+        <div class="dnum" dir="ltr">${d.n} <span style="font-size:12px;color:var(--ink-faint)">${d.warn ? s.dPairs : s.dUnit}</span></div>
+        ${d.warn ? `<div style="font-size:11.5px;color:var(--amber);margin-top:7px">${s.dWarn}</div>` : ""}
         <div class="dlinks" style="margin-top:10px">
-          <a href="corpus/${d.id}/controls.json" dir="ltr">JSON</a>
-          <a href="corpus/${d.id}/controls.csv" dir="ltr">CSV</a>
+          <a href="corpus/${d.id}/${d.file || "controls"}.json" dir="ltr">JSON</a>
+          ${d.file ? "" : `<a href="corpus/${d.id}/controls.csv" dir="ltr">CSV</a>`}
           <a href="https://github.com/SiteQ8/Markaz/tree/main/corpus/${d.id}" dir="ltr">docs</a>
         </div>
       </article>`).join("") + `</div>`;

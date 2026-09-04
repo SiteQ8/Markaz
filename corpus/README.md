@@ -10,6 +10,7 @@ on it, cite it, or check it.
 | --- | --- | --- | --- |
 | [`kw-nbcc`](kw-nbcc/) | Kuwait National Basic Cybersecurity Controls, NCSC Decision No. 2 of 2026 | 44 controls | JSON, CSV |
 | [`kw-corf`](kw-corf/) | CBK Cyber and Operational Resilience Framework v1.0 | 874 controls | JSON, CSV |
+| [`kw-crosswalk`](kw-crosswalk/) | Proposed national baseline to CBK mapping, **unreviewed** | 215 candidate pairs | JSON |
 
 ## The provenance rule
 
@@ -29,10 +30,20 @@ main body and not for the Appendix A cloud tables. The corpus therefore expects
 exactly 28 official purposes and 16 editorial ones. If that ratio moves, the
 corpus has drifted from its source and the build stops.
 
+## The review rule
+
+`kw-crosswalk` is a proposal, not a mapping. Every pair carries `status:
+proposed` with a null reviewer, and the validator fails the build if a pair
+claims a reviewed status without a named reviewer, if a decision is recorded on
+a still proposed pair, or if the headline reviewed count disagrees with the
+file. The method behind it is validated in
+[note 0002](../publications/0002-validated-regulatory-crosswalk/).
+
 ## Reproducing
 
 ```
 node scripts/build_corpus.mjs /path/to/Kuwait-NBCC
+python3 scripts/build_crosswalk.py
 python3 scripts/validate_corpus.py
 ```
 
