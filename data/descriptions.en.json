@@ -1,0 +1,19 @@
+{
+  "_note": "Overrides applied only where the upstream GitHub description mixes Arabic and Latin script. The centre renders one language at a time, so each mode needs a clean source string. GitHub descriptions themselves are left untouched.",
+
+  "ArabWatch": "A comprehensive Arabic monitoring dashboard covering live news across 29 channels, weather, currencies, oil prices and a world map.",
+  "Athar": "Offline network forensics workbench with a BPF builder, statistical beacon detection and domain generation algorithm scoring.",
+  "CIS-Kuwait-Assessment": "CIS Benchmark compliance checker and self assessment tool built for Kuwait government entities.",
+  "CyberPolicy-KW": "Information security policy and procedure repository for Kuwait, covering 30 policies and standards with more than 360 controls.",
+  "daily-ayah": "Complete Holy Quran reader covering all 114 surahs and 6236 ayahs in Uthmani script.",
+  "Diwan": "The cybersecurity program office every company should have, delivered in a single file with a risk register and programme tracking.",
+  "duaarepo": "A collection of more than 337 authenticated supplications drawn from the Quran, the Sunnah and Hisn al-Muslim.",
+  "Ghirbal": "Fully client-side indicator of compromise extraction and triage sieve with defang-aware parsing across 12 indicator types.",
+  "Hawqala": "A simple remembrance and supplication application built around a single well known invocation.",
+  "Kashif": "Client-side secrets and sensitive data exposure scanner covering more than 35 patterns with entropy analysis.",
+  "MAI": "Kuwait water delivery application aggregating 10 companies and 68 products with full bilingual support.",
+  "Marsad": "Enterprise vulnerability management platform built on FastAPI and PostgreSQL with a role-based single page application.",
+  "Raqib": "A read only cloud exposure auditor. Point it at a cloud account and it reports exposure without changing anything.",
+  "Wa3i": "An Arabic cybersecurity awareness guide offering practical security guidance for Gulf users.",
+  "Wain": "Directory of Kuwait kids activities, summer clubs, nurseries and babysitters with 15 listings and verified contacts."
+}

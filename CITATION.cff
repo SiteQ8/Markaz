@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: "Markaz: Kuwait Cybersecurity Research Centre"
+message: "If you use this catalogue or any project indexed within it, please cite it as below."
+type: software
+authors:
+  - family-names: AlEnezi
+    given-names: Ali
+    alias: SiteQ8
+    country: KW
+repository-code: "https://github.com/SiteQ8/Markaz"
+url: "https://siteq8.github.io/Markaz/"
+abstract: >-
+  A control centre indexing open cybersecurity research, tooling and datasets
+  published from Kuwait, covering 107 original projects across 15 domains with
+  full English and Arabic coverage.
+keywords:
+  - cybersecurity
+  - kuwait
+  - open source
+  - compliance
+  - arabic
+license: Apache-2.0

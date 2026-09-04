@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Markaz | Kuwait Cybersecurity Research Centre</title>
+<meta name="description" content="Control centre for open cybersecurity research, tooling and resources from Kuwait.">
+<style>
+:root{
+  --bg:#080b10; --band:#0e131b; --card:#121822; --card-hi:#18202c;
+  --line:#1e2733; --line-hi:#2b3745;
+  --ink:#e8eef5; --ink-dim:#93a1b2; --ink-faint:#5f6d7e;
+  --signal:#2dd4a7; --kuwait:#00a86b; --amber:#f0b429; --slate:#7c8b9c;
+  --latin:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  --arabic:"SF Arabic","Segoe UI","Noto Naskh Arabic","Geeza Pro",Tahoma,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg)}
+body{
+  background:var(--bg); color:var(--ink); font-family:var(--latin);
+  line-height:1.62; letter-spacing:-0.006em;
+  font-variant-numeric:tabular-nums; font-feature-settings:"tnum" 1;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+html[dir="rtl"] body{
+  font-family:var(--arabic); line-height:1.85; letter-spacing:normal;
+}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* Masthead */
+.top{border-bottom:1px solid var(--line);background:var(--band)}
+.top-in{display:flex;align-items:center;gap:16px;padding:18px 0;flex-wrap:wrap}
+.mark{
+  width:42px;height:42px;flex:none;border-radius:9px;
+  background:linear-gradient(150deg,var(--kuwait),#046b48);
+  display:grid;place-items:center;font-size:20px;color:#fff;
+  font-family:var(--arabic);
+}
+.brand{flex:1;min-width:180px}
+.brand h1{font-size:19px;font-weight:650;letter-spacing:-0.02em}
+html[dir="rtl"] .brand h1{letter-spacing:normal}
+.brand p{font-size:12.5px;color:var(--ink-dim);margin-top:1px}
+.langbtn{
+  background:var(--card);border:1px solid var(--line-hi);color:var(--ink);
+  padding:8px 15px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:600;
+}
+.langbtn:hover{border-color:var(--signal);color:var(--signal)}
+
+/* Hero */
+.hero{padding:52px 0 40px;border-bottom:1px solid var(--line)}
+.hero h2{font-size:31px;font-weight:680;letter-spacing:-0.028em;max-width:22ch;line-height:1.22}
+html[dir="rtl"] .hero h2{letter-spacing:normal;line-height:1.5;max-width:26ch}
+.hero p{color:var(--ink-dim);margin-top:14px;max-width:60ch;font-size:15px}
+
+/* Stat band */
+.band{background:var(--band);border-block:1px solid var(--line)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr))}
+.stat{padding:20px 18px;border-inline-end:1px solid var(--line)}
+.stat:last-child{border-inline-end:0}
+.stat b{display:block;font-size:26px;font-weight:660;color:var(--signal);font-family:var(--mono);letter-spacing:-0.03em}
+.stat span{font-size:11.5px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.09em;margin-top:3px;display:block}
+html[dir="rtl"] .stat span{text-transform:none;letter-spacing:normal;font-size:12.5px}
+
+/* Controls */
+.controls{padding:26px 0 6px;position:sticky;top:0;background:var(--bg);z-index:20;border-bottom:1px solid var(--line)}
+.search{
+  width:100%;background:var(--card);border:1px solid var(--line-hi);color:var(--ink);
+  padding:11px 15px;border-radius:9px;font-size:14.5px;font-family:inherit;
+}
+.search:focus{outline:none;border-color:var(--signal)}
+.search::placeholder{color:var(--ink-faint)}
+.chips{display:flex;gap:7px;flex-wrap:wrap;margin:13px 0}
+.chip{
+  background:var(--card);border:1px solid var(--line);color:var(--ink-dim);
+  padding:6px 12px;border-radius:99px;cursor:pointer;font-size:12.5px;
+  font-family:inherit;white-space:nowrap;
+}
+.chip:hover{border-color:var(--line-hi);color:var(--ink)}
+.chip.on{background:var(--signal);border-color:var(--signal);color:#04120d;font-weight:640}
+.chip b{font-family:var(--mono);opacity:.62;margin-inline-start:5px;font-weight:500}
+
+/* Sections */
+.sec{padding:34px 0 4px}
+.sec-h{display:flex;align-items:baseline;gap:11px;margin-bottom:5px;flex-wrap:wrap}
+.sec-h h3{font-size:17.5px;font-weight:650;letter-spacing:-0.017em}
+html[dir="rtl"] .sec-h h3{letter-spacing:normal}
+.sec-h em{font-style:normal;font-family:var(--mono);font-size:12px;color:var(--ink-faint)}
+.sec-d{color:var(--ink-faint);font-size:13.5px;margin-bottom:17px;max-width:72ch}
+
+.grid{display:grid;gap:11px;grid-template-columns:repeat(auto-fill,minmax(292px,1fr))}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:11px;
+  padding:15px 16px;display:flex;flex-direction:column;gap:8px;
+  border-inline-start:2px solid var(--line-hi);
+}
+.card:hover{background:var(--card-hi);border-color:var(--line-hi)}
+.card.flagship{border-inline-start-color:var(--signal)}
+.card.active{border-inline-start-color:var(--kuwait)}
+.card.seed{border-inline-start-color:var(--slate)}
+.card-t{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.card-t a{
+  color:var(--ink);text-decoration:none;font-weight:640;font-size:15px;
+  font-family:var(--mono);letter-spacing:-0.02em;
+  overflow-wrap:anywhere; word-break:normal;
+}
+.card-t a:hover{color:var(--signal)}
+.card p{color:var(--ink-dim);font-size:13.4px;line-height:1.58;flex:1}
+html[dir="rtl"] .card p{line-height:1.85;font-size:14px}
+.meta{display:flex;gap:7px;flex-wrap:wrap;align-items:center;font-size:11.5px;color:var(--ink-faint);font-family:var(--mono)}
+.tag{border:1px solid var(--line-hi);padding:2px 7px;border-radius:5px;white-space:nowrap}
+.tag.star{color:var(--amber);border-color:#4a3a10}
+.tag.site{color:var(--signal);border-color:#154034;text-decoration:none}
+html[dir="rtl"] .tag.site,html[dir="rtl"] .tag.nolic{font-family:var(--arabic);letter-spacing:normal}
+.tag.site:hover{background:#0f2b23}
+.tag.nolic{color:#e8927c;border-color:#4a2620}
+
+/* Mirrors */
+.mirrors{background:var(--band);border:1px solid var(--line);border-radius:11px;padding:19px;margin:12px 0 0}
+.mirrors h4{font-size:14.5px;font-weight:640;margin-bottom:6px}
+.mirrors p{color:var(--ink-faint);font-size:13px;margin-bottom:13px;max-width:70ch}
+.mlist{display:flex;flex-wrap:wrap;gap:6px}
+.mlist a{
+  font-family:var(--mono);font-size:11.5px;color:var(--ink-dim);text-decoration:none;
+  border:1px solid var(--line);padding:3px 8px;border-radius:5px;
+}
+.mlist a:hover{border-color:var(--line-hi);color:var(--ink)}
+
+.empty{color:var(--ink-faint);padding:30px 0;font-size:14px}
+footer{border-top:1px solid var(--line);margin-top:46px;padding:26px 0 42px;color:var(--ink-faint);font-size:13px}
+footer a{color:var(--ink-dim);text-decoration:none}
+footer a:hover{color:var(--signal)}
+.foot-in{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:560px){
+  .hero{padding:36px 0 30px}
+  .hero h2{font-size:25px}
+  .grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap"><div class="top-in">
+  <div class="mark">م</div>
+  <div class="brand"><h1 id="bn"></h1><p id="bt"></p></div>
+  <button class="langbtn" id="lang" onclick="toggle()"></button>
+</div></div></div>
+
+<div class="wrap"><div class="hero">
+  <h2 id="hh"></h2>
+  <p id="hp"></p>
+</div></div>
+
+<div class="band"><div class="wrap"><div class="stats" id="stats"></div></div></div>
+
+<div class="wrap">
+  <div class="controls">
+    <input class="search" id="q" oninput="render()" autocomplete="off">
+    <div class="chips" id="chips"></div>
+  </div>
+  <div id="out"></div>
+
+  <div class="mirrors">
+    <h4 id="mh"></h4>
+    <p id="mp"></p>
+    <div class="mlist" id="ml"></div>
+  </div>
+</div>
+
+<footer><div class="wrap"><div class="foot-in">
+  <span id="f1"></span>
+  <span><a href="https://github.com/SiteQ8" id="f2"></a></span>
+</div></div></footer>
+
+<script>
+const DATA = /*__CATALOG__*/null;
+
+const T = {
+  en:{
+    name:"Markaz", tag:"Kuwait Cybersecurity Research Centre",
+    btn:"العربية",
+    h:"A control centre for open cybersecurity research from Kuwait.",
+    p:"Every tool, control mapping and dataset published under this account, catalogued by domain and kept current from source. Built for practitioners, regulators and students working on Kuwait and Gulf cybersecurity.",
+    s:{projects:"Projects",domains:"Domains",flagship:"Flagship",with_site:"Live tools",stars:"Stars"},
+    search:"Search projects, languages, topics",
+    all:"All",
+    mh:"Mirrored upstream work",
+    mp:"These repositories are forks and mirrors of work by others, kept for study and reference. They are not original research from this centre and are listed separately so the distinction is never lost.",
+    none:"No projects match that filter.",
+    f1:"Open catalogue. Rebuilt from source, not maintained by hand.",
+    f2:"github.com/SiteQ8",
+    nolic:"no licence"
+  },
+  ar:{
+    name:"مركز", tag:"مركز الكويت لأبحاث الأمن السيبراني",
+    btn:"English",
+    h:"مركز تحكّم لأبحاث الأمن السيبراني المفتوحة من الكويت.",
+    p:"كل أداة وربط ضوابط ومجموعة بيانات نُشرت تحت هذا الحساب، مفهرسةً حسب المجال ومحدَّثةً من المصدر مباشرةً، وقد بُني المركز ليخدم الممارسين والجهات التنظيمية والطلبة العاملين على الأمن السيبراني في الكويت والخليج.",
+    s:{projects:"مشروع",domains:"مجال",flagship:"مشروع رئيسي",with_site:"أداة تعمل",stars:"نجمة"},
+    search:"ابحث في المشاريع واللغات والمواضيع",
+    all:"الكل",
+    mh:"أعمال منسوخة من مصادر خارجية",
+    mp:"هذه المستودعات نسخ من أعمال آخرين احتُفظ بها للدراسة والرجوع، وهي ليست من إنتاج المركز لذا فُصلت هنا كي لا يلتبس الأمر على القارئ.",
+    none:"لا توجد مشاريع تطابق هذا التصفية.",
+    f1:"كتالوج مفتوح يُبنى من المصدر آلياً لا يدوياً.",
+    f2:"github.com/SiteQ8",
+    nolic:"دون رخصة"
+  }
+};
+
+let lang = "en";
+let domain = "*";
+
+function t(){ return T[lang]; }
+
+function toggle(){
+  lang = lang === "en" ? "ar" : "en";
+  const h = document.documentElement;
+  h.lang = lang; h.dir = lang === "ar" ? "rtl" : "ltr";
+  paint(); render();
+}
+
+function paint(){
+  const s = t();
+  document.title = s.name + " | " + s.tag;
+  bn.textContent = s.name; bt.textContent = s.tag;
+  lang_.textContent = s.btn;
+  hh.textContent = s.h; hp.textContent = s.p;
+  q.placeholder = s.search;
+  mh.textContent = s.mh; mp.textContent = s.mp;
+  f1.textContent = s.f1; f2.textContent = s.f2;
+
+  const st = DATA.stats;
+  stats.innerHTML = [
+    [st.projects, s.s.projects],
+    [DATA.domains.length, s.s.domains],
+    [st.flagship, s.s.flagship],
+    [st.with_site, s.s.with_site],
+    [st.stars, s.s.stars]
+  ].map(([v,l]) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`).join("");
+
+  const counts = {};
+  DATA.projects.forEach(p => counts[p.domain] = (counts[p.domain]||0)+1);
+  chips.innerHTML =
+    `<button class="chip ${domain==="*"?"on":""}" onclick="pick('*')">${s.all}<b>${st.projects}</b></button>` +
+    DATA.domains.map(d =>
+      `<button class="chip ${domain===d.id?"on":""}" onclick="pick('${d.id}')">${lang==="ar"?d.ar:d.en}<b>${counts[d.id]||0}</b></button>`
+    ).join("");
+
+  ml.innerHTML = DATA.mirrors.map(m =>
+    `<a href="${m.url}" target="_blank" rel="noopener" dir="ltr">${m.name}</a>`).join("");
+}
+
+function pick(d){ domain = d; paint(); render(); }
+
+function esc(x){ return String(x).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+
+function render(){
+  const s = t();
+  const term = q.value.trim().toLowerCase();
+  const hits = DATA.projects.filter(p => {
+    if (domain !== "*" && p.domain !== domain) return false;
+    if (!term) return true;
+    return (p.name + " " + p.description + " " + p.ar + " " + p.language + " " +
+            p.topics.join(" ")).toLowerCase().includes(term);
+  });
+
+  if (!hits.length){ out.innerHTML = `<p class="empty">${s.none}</p>`; return; }
+
+  const shown = DATA.domains.filter(d => hits.some(p => p.domain === d.id));
+  out.innerHTML = shown.map(d => {
+    const rows = hits.filter(p => p.domain === d.id)
+      .sort((a,b) => b.stars - a.stars || b.size_kb - a.size_kb);
+    return `<section class="sec">
+      <div class="sec-h"><h3>${lang==="ar"?d.ar:d.en}</h3><em>${rows.length}</em></div>
+      <p class="sec-d">${lang==="ar"?d.ar_desc:d.en_desc}</p>
+      <div class="grid">${rows.map(card).join("")}</div>
+    </section>`;
+  }).join("");
+}
+
+function card(p){
+  const s = t();
+  const desc = lang === "ar" ? (p.ar || "") : (p.description || "");
+  const bits = [];
+  if (p.language) bits.push(`<span class="tag" dir="ltr">${esc(p.language)}</span>`);
+  if (p.stars) bits.push(`<span class="tag star" dir="ltr">${p.stars}</span>`);
+  if (p.license && p.license !== "NOASSERTION") bits.push(`<span class="tag" dir="ltr">${esc(p.license)}</span>`);
+  else bits.push(`<span class="tag nolic">${s.nolic}</span>`);
+  if (p.pages) bits.push(`<a class="tag site" href="${p.pages}" target="_blank" rel="noopener" dir="ltr">${lang==="ar"?"افتح":"open"}</a>`);
+  return `<article class="card ${p.maturity}">
+    <div class="card-t"><a href="${p.url}" target="_blank" rel="noopener" dir="ltr">${esc(p.name)}</a></div>
+    <p>${esc(desc)}</p>
+    <div class="meta">${bits.join("")}</div>
+  </article>`;
+}
+
+const lang_ = document.getElementById("lang");
+paint(); render();
+</script>
+</body>
+</html>
