@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: "Licence Files That Are Never Read"
+message: "Cite this research note as below."
+type: article
+authors:
+  - family-names: AlEnezi
+    given-names: Ali
+    alias: SiteQ8
+    country: KW
+date-released: 2026-09-04
+url: "https://github.com/SiteQ8/Markaz/tree/main/publications/0001-licence-files-never-read"
+abstract: >-
+  A licence file can be present and readable to a person while every automated
+  consumer treats it as absent. This note documents six causes, reports an audit
+  of 109 repositories in which 21 carried an unreadable licence, and publishes a
+  detector that reproduces the result against any GitHub account.
+keywords:
+  - open source
+  - licensing
+  - software supply chain
+  - compliance
+license: MIT

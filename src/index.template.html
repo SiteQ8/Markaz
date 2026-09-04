@@ -169,7 +169,7 @@ footer a:hover{color:var(--signal)}
 
 <footer><div class="wrap"><div class="foot-in">
   <span id="f1"></span>
-  <span><a href="https://github.com/SiteQ8" id="f2"></a></span>
+  <span><a href="publications/" id="f3"></a> &nbsp;·&nbsp; <a href="https://github.com/SiteQ8" id="f2"></a></span>
 </div></div></footer>
 
 <script>
@@ -189,6 +189,7 @@ const T = {
     none:"No projects match that filter.",
     f1:"Open catalogue. Rebuilt from source, not maintained by hand.",
     f2:"github.com/SiteQ8",
+    f3:"Publications",
     nolic:"no licence"
   },
   ar:{
@@ -204,6 +205,7 @@ const T = {
     none:"لا توجد مشاريع تطابق هذا التصفية.",
     f1:"كتالوج مفتوح يُبنى من المصدر آلياً لا يدوياً.",
     f2:"github.com/SiteQ8",
+    f3:"الأبحاث",
     nolic:"دون رخصة"
   }
 };
@@ -228,7 +230,7 @@ function paint(){
   hh.textContent = s.h; hp.textContent = s.p;
   q.placeholder = s.search;
   mh.textContent = s.mh; mp.textContent = s.mp;
-  f1.textContent = s.f1; f2.textContent = s.f2;
+  f1.textContent = s.f1; f2.textContent = s.f2; f3.textContent = s.f3;
 
   const st = DATA.stats;
   stats.innerHTML = [
