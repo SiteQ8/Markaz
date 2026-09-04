@@ -1,0 +1,308 @@
+{
+  "dataset": "kw-coverage",
+  "title": "Coverage analysis of the Kuwait national baseline",
+  "titleAr": "تحليل تغطية الأساس الوطني الكويتي",
+  "licence": "MIT",
+  "provenance": {
+    "note": "Derived entirely from the mappings published in kw-nbcc. The CSF and CIS mappings are named by the Decision as alignment references. The ISO mapping is added by this centre and has no official standing, so figures resting on it are weaker.",
+    "noteAr": "مشتق كليا من الربوط المنشورة في المدونة الوطنية، والربط بإطار المعهد الوطني وبالضوابط الحرجة مسمى في القرار مرجعا للمواءمة، أما الربط بالمعيار الدولي فأضافه المركز ولا يحمل صفة رسمية لذا فالأرقام القائمة عليه أضعف."
+  },
+  "counts": {
+    "controls": 44,
+    "main_body": 28,
+    "appendix_a_cloud": 16,
+    "cloud_share_by_count": 0.364,
+    "cloud_share_of_new_csf_ground": 0.12
+  },
+  "by_framework": {
+    "csf": {
+      "body_refs": 44,
+      "cloud_refs": 21,
+      "shared": 15,
+      "cloud_only": [
+        "GV.OC-03",
+        "GV.SC-03",
+        "GV.SC-05",
+        "GV.SC-06",
+        "GV.SC-08",
+        "ID.AM-08"
+      ],
+      "body_only": 29,
+      "distinct_total": 50,
+      "cloud_restatement_rate": 0.714
+    },
+    "cis": {
+      "body_refs": 68,
+      "cloud_refs": 25,
+      "shared": 13,
+      "cloud_only": [
+        "12.6",
+        "12.7",
+        "15.3",
+        "15.5",
+        "15.6",
+        "15.7",
+        "3.10",
+        "3.11",
+        "3.12",
+        "3.3",
+        "3.6",
+        "5.6"
+      ],
+      "body_only": 55,
+      "distinct_total": 80,
+      "cloud_restatement_rate": 0.52
+    },
+    "iso": {
+      "body_refs": 53,
+      "cloud_refs": 20,
+      "shared": 16,
+      "cloud_only": [
+        "A.5.23",
+        "A.5.31",
+        "A.8.21",
+        "A.8.3"
+      ],
+      "body_only": 37,
+      "distinct_total": 57,
+      "cloud_restatement_rate": 0.8
+    }
+  },
+  "cloud_only_csf_by_category": {
+    "GV.OC": 1,
+    "GV.SC": 4,
+    "ID.AM": 1
+  },
+  "csf_load": [
+    {
+      "subcategory": "PR.AA-05",
+      "controls": 8
+    },
+    {
+      "subcategory": "PR.DS-01",
+      "controls": 6
+    },
+    {
+      "subcategory": "PR.AA-01",
+      "controls": 5
+    },
+    {
+      "subcategory": "GV.PO-01",
+      "controls": 4
+    },
+    {
+      "subcategory": "ID.AM-07",
+      "controls": 4
+    },
+    {
+      "subcategory": "PR.PS-01",
+      "controls": 4
+    },
+    {
+      "subcategory": "DE.CM-01",
+      "controls": 4
+    },
+    {
+      "subcategory": "GV.SC-04",
+      "controls": 3
+    },
+    {
+      "subcategory": "GV.SC-07",
+      "controls": 3
+    },
+    {
+      "subcategory": "ID.AM-01",
+      "controls": 3
+    },
+    {
+      "subcategory": "ID.AM-02",
+      "controls": 3
+    },
+    {
+      "subcategory": "PR.IR-01",
+      "controls": 3
+    },
+    {
+      "subcategory": "PR.DS-02",
+      "controls": 3
+    },
+    {
+      "subcategory": "PR.AT-01",
+      "controls": 3
+    },
+    {
+      "subcategory": "GV.RR-02",
+      "controls": 2
+    },
+    {
+      "subcategory": "ID.IM-02",
+      "controls": 2
+    },
+    {
+      "subcategory": "GV.SC-10",
+      "controls": 2
+    },
+    {
+      "subcategory": "PR.AA-03",
+      "controls": 2
+    },
+    {
+      "subcategory": "DE.CM-03",
+      "controls": 2
+    },
+    {
+      "subcategory": "RS.CO-02",
+      "controls": 2
+    },
+    {
+      "subcategory": "GV.OC-03",
+      "controls": 2
+    },
+    {
+      "subcategory": "GV.SC-05",
+      "controls": 2
+    },
+    {
+      "subcategory": "ID.AM-08",
+      "controls": 2
+    },
+    {
+      "subcategory": "GV.RR-01",
+      "controls": 1
+    },
+    {
+      "subcategory": "GV.PO-02",
+      "controls": 1
+    },
+    {
+      "subcategory": "GV.RR-04",
+      "controls": 1
+    },
+    {
+      "subcategory": "GV.OV-01",
+      "controls": 1
+    },
+    {
+      "subcategory": "GV.OV-03",
+      "controls": 1
+    },
+    {
+      "subcategory": "ID.RA-01",
+      "controls": 1
+    },
+    {
+      "subcategory": "ID.RA-06",
+      "controls": 1
+    },
+    {
+      "subcategory": "PR.PS-02",
+      "controls": 1
+    },
+    {
+      "subcategory": "PR.AA-02",
+      "controls": 1
+    },
+    {
+      "subcategory": "PR.AT-02",
+      "controls": 1
+    },
+    {
+      "subcategory": "PR.PS-05",
+      "controls": 1
+    },
+    {
+      "subcategory": "PR.DS-11",
+      "controls": 1
+    },
+    {
+      "subcategory": "PR.DS-10",
+      "controls": 1
+    },
+    {
+      "subcategory": "PR.AA-06",
+      "controls": 1
+    },
+    {
+      "subcategory": "PR.PS-04",
+      "controls": 1
+    },
+    {
+      "subcategory": "RS.CO-03",
+      "controls": 1
+    },
+    {
+      "subcategory": "RS.MA-01",
+      "controls": 1
+    },
+    {
+      "subcategory": "RS.MA-02",
+      "controls": 1
+    },
+    {
+      "subcategory": "RS.MI-01",
+      "controls": 1
+    },
+    {
+      "subcategory": "RS.AN-03",
+      "controls": 1
+    },
+    {
+      "subcategory": "ID.IM-04",
+      "controls": 1
+    },
+    {
+      "subcategory": "RC.RP-01",
+      "controls": 1
+    },
+    {
+      "subcategory": "RC.RP-03",
+      "controls": 1
+    },
+    {
+      "subcategory": "RC.RP-05",
+      "controls": 1
+    },
+    {
+      "subcategory": "GV.SC-03",
+      "controls": 1
+    },
+    {
+      "subcategory": "GV.SC-06",
+      "controls": 1
+    },
+    {
+      "subcategory": "GV.SC-08",
+      "controls": 1
+    }
+  ],
+  "by_function": {
+    "CLD": {
+      "controls": 16,
+      "distinct_csf": 21
+    },
+    "DE": {
+      "controls": 2,
+      "distinct_csf": 4
+    },
+    "GOV": {
+      "controls": 6,
+      "distinct_csf": 13
+    },
+    "ID": {
+      "controls": 3,
+      "distinct_csf": 6
+    },
+    "PR": {
+      "controls": 13,
+      "distinct_csf": 21
+    },
+    "RC": {
+      "controls": 2,
+      "distinct_csf": 4
+    },
+    "RS": {
+      "controls": 2,
+      "distinct_csf": 7
+    }
+  }
+}
